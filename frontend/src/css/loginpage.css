@@ -1,0 +1,9 @@
+.LoginPage {
+    text-align: center;
+    padding: 100px;
+}
+
+.google-btn {
+    height: 100px;
+    border: 10px solid red;
+}

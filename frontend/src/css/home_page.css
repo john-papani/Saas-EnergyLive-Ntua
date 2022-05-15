@@ -1,0 +1,155 @@
+.Home {
+    background: #005aa7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fffde4, #005aa7);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fffde4, #005aa7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.logo_home {
+    height: 300px;
+    width: 500px;
+}
+
+.title_home {
+    font-weight: bold;
+}
+
+.google_button {
+    border: 2px solid gray;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-bottom: 35px;
+}
+
+.google_button:hover {
+    border: 2px solid gray;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-bottom: 35px;
+    background-color: black;
+    color: white;
+}
+
+
+/* ---------------------------------------------------------------*/
+
+
+/* line between sign_google and footer*/
+
+.row {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.divider {
+    position: relative;
+    margin-top: 10px;
+}
+
+.div-transparent:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: 20%;
+    width: 60%;
+    height: 1px;
+    background-color: rgb(48, 49, 51);
+    /* background-image: linear-gradient(to right, transparent, rgb(48, 49, 51), transparent); */
+}
+
+
+/* ---------------------------------------------------------------*/
+
+
+/* footer home page*/
+
+.footer_home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    color: black;
+    position: sticky;
+    width: 100%;
+}
+
+.footer_links {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: right;
+    list-style: none;
+}
+
+.f_link {
+    color: black;
+    font-weight: bold;
+}
+
+
+/* ---------------------------------------------------------------*/
+
+
+/* about page */
+
+.container {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.about-paragraph {
+    background-color: cornsilk;
+    border-radius: 12px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo-profile {
+    height: 250px;
+    width: 45px;
+}
+
+.title-about {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.col-sm-3 {
+    border: none;
+    padding: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.q-about {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.About {
+    background: #7F7FD5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-bottom: 70px;
+}
+
+.line-about {
+    padding-top: 1px;
+    margin-top: 0px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ---------------------------------------------------------------*/
