@@ -4,7 +4,7 @@ import "../css/main.css";
 
 import AristeraMain from "./AristeraMain";
 import DexiaMain from "./DexiaMain";
-
+import Navbar from "../Basics/Navbar";
 const Main1 = () => {
   const [startDate, setStartDate] = useState(
     new Date("01-01-2022").setHours(0, 0, 0, 0)
@@ -15,9 +15,7 @@ const Main1 = () => {
 
   return (
     <div className="Main1">
-      <h3>
-        <a href="/home">Home</a>
-      </h3>
+      <Navbar />
       <div className="container">
         <div class="row">
           <div class="col-4" id="aristera">

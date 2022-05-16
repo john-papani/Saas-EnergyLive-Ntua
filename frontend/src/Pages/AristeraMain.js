@@ -75,7 +75,7 @@ const AristeraMain = ({
       <br />
       <h6 style={{ color: "red" }}>PRESS TO SEE THE NEW CHART</h6>
       <Button variant="outline-danger">See the new chart</Button>
-      <Button variant="outline-secondary" onClick={refreshPage}>
+      <Button variant="outline-dark " onClick={refreshPage}>
         Refresh
       </Button>
     </div>

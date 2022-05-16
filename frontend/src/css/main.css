@@ -1,6 +1,11 @@
 .Main1 {
-    background-color: #eae7dc;
+    /* background-color: #eae7dc; */
+    background-color: rgba(158, 191, 205, 255);
     padding-bottom: 50px;
+}
+
+.Main1 .container {
+    padding-top: 0;
 }
 
 #aristera {
@@ -58,4 +63,22 @@ hr.solid {
 
 .col-sm-3 {
     margin-top: 0px;
+}
+
+
+/* navbar */
+
+
+/* .navbar-brand {
+    text-decoration: none;
+    color: rgb(42, 50, 165);
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-left: 10px;
+    padding: 10px;
+    background-color: rgb(157, 205, 247);
+} */
+
+.nav-bar {
+    padding-bottom: 0px;
 }

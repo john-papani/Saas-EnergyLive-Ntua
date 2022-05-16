@@ -109,6 +109,7 @@
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 10px;
 }
 
 .logo-profile {
@@ -134,11 +135,11 @@
 }
 
 .About {
-    background: #7F7FD5;
+    background: #7f7fd5;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);
+    background: -webkit-linear-gradient(to bottom, #91eae4, #86a8e7, #7f7fd5);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);
+    background: linear-gradient(to bottom, #91eae4, #86a8e7, #7f7fd5);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding-bottom: 70px;
 }

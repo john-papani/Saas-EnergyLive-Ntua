@@ -11,6 +11,7 @@ import LoginPage from "./Pages/LoginPage";
 import Navbar from "./Basics/Navbar";
 import Testing from "./Pages/Testing";
 import ExtendPlan from "./Pages/ExtendPlan";
+import Legal from "./Pages/Legal"
 function App() {
   return (
     <Router>
@@ -25,6 +26,7 @@ function App() {
         <Route path="*" element={<ErrorPage />} />
         <Route path="/test" element={<Testing />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/legal" element={<Legal />} />
         {/* <Route path="/upload" element={<Upload/>}/> */}
       </Routes>
 

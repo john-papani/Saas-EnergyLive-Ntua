@@ -1,0 +1,21 @@
+#site-entsoe {
+    text-align: center;
+}
+
+.Legal {
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    padding-bottom: 80px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.legal-text {
+    background-color: #347bb3;
+    padding: 100px;
+    border-radius: 10%;
+}
+
+.legal-text a:hover {
+    background-color: gray;
+    color: black;
+}

@@ -105,12 +105,12 @@ const ExtendPlan = () => {
         <div class="row">
           <div class="d-inline-flex mx-auto">
             <div class="col-sm-3">
-              <button class="btn btn-primary btn-lg" type="button">
+              <button class="btn btn-dark btn-lg" id="btn-ext" type="button">
                 <a href="/#"> Extend</a>
               </button>
             </div>
             <div class="col-sm-3">
-              <button class="btn btn-primary btn-lg" type="button">
+              <button class="btn btn-dark btn-lg" id="btn-ext"  type="button">
                 <a href="/main">Cancel</a>
               </button>
             </div>
