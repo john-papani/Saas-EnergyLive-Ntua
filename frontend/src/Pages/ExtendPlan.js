@@ -4,12 +4,12 @@ import "../css/extend.css";
 import axios from "axios";
 
 const ExtendPlan = () => {
-  const [email, setEmail] = useState("testing@mail.gr");
-  const [name, setName] = useState("Ioannis");
-  const [surname, setSurname] = useState("Papanikolaou");
-  const [lastlogin, setLastlogin] = useState(
-    new Date("02-01-2022").setHours(0, 0, 0, 0)
-  );
+  // const [email, setEmail] = useState("testing@mail.gr");
+  // const [name, setName] = useState("Ioannis");
+  // const [surname, setSurname] = useState("Papanikolaou");
+  // const [lastlogin, setLastlogin] = useState(
+  //   new Date("02-01-2022").setHours(0, 0, 0, 0)
+  // );
   const [dayextend, setDayextend] = useState(0);
   const [daysleft, setDaysleft] = useState(10);
 
@@ -29,7 +29,7 @@ const ExtendPlan = () => {
                 <p class="mb-0">First Name</p>
               </div>
               <div class="col-sm-5">
-                <p class="mb-0">{name}</p>
+                <p class="mb-0">{sessionStorage.getItem("username")}</p>
               </div>
             </div>
             <hr />
@@ -38,7 +38,7 @@ const ExtendPlan = () => {
                 <p class="mb-0">Last Name</p>
               </div>
               <div class="col-sm-5">
-                <p class="mb-0">{surname}</p>
+                <p class="mb-0">{sessionStorage.getItem("userfamilyname")}</p>
               </div>
             </div>
             <hr />
@@ -47,7 +47,7 @@ const ExtendPlan = () => {
                 <p class="mb-0">Email</p>
               </div>
               <div class="col-sm-5">
-                <p class="mb-0">{email}</p>
+                <p class="mb-0">{sessionStorage.getItem("userEmail")}</p>
               </div>
             </div>
             <hr />
@@ -56,7 +56,7 @@ const ExtendPlan = () => {
                 <p class="mb-0">Last Login</p>
               </div>
               <div class="col-sm-5">
-                <p class="mb-0">{Date(lastlogin).toString()}</p>
+                <p class="mb-0">{sessionStorage.getItem("timelogin")}</p>
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@ const ExtendPlan = () => {
               </button>
             </div>
             <div class="col-sm-3">
-              <button class="btn btn-dark btn-lg" id="btn-ext"  type="button">
+              <button class="btn btn-dark btn-lg" id="btn-ext" type="button">
                 <a href="/main">Cancel</a>
               </button>
             </div>
