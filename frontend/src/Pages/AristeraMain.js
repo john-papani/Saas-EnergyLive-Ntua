@@ -4,6 +4,7 @@ import "../css/main.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Button } from "react-bootstrap";
+import axios from "axios";
 
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
@@ -15,10 +16,28 @@ const AristeraMain = ({
   setQuantity,
   setCountry,
   setType,
+  setData,
 }) => {
   function refreshPage() {
-    alert("BE Careful reload PAGE!");
+    alert("BE Careful RELOAD page!");
     window.location.reload(false);
+  }
+
+  async function getCountryData() {
+    const res = await axios.get(`https://jsonplaceholder.typicode.com/posts`);
+
+    //! analoga me to eidos tha kanei call to antistoixo API
+    // if ({ quantity } === "Actual Total Load") {
+    //   const res = await axios.get(
+    //     `http://localhost:3000/actual-total-load/${date}/${country}}`
+    //   );
+    // } else if ({ quantity } === "Generation Per Type") {
+    //   const res = await axios.get(
+    //     `http://localhost:3001/aggregated-generation-per-type"/${date}/${country}/${type}/json`
+    //   );
+    // }
+    setData(res.data);
+    // console.log(res.data);
   }
 
   return (
@@ -34,8 +53,8 @@ const AristeraMain = ({
         }}
         inline
         calendarStartDay={1}
-      />
-      <p className="title-drop">Quantity</p>
+      />{" "}
+      <p className="title-drop"> Quantity </p>{" "}
       <Dropdown
         className="dropdown"
         options={["Actual Total Load", "Generation Per Type"]}
@@ -46,7 +65,7 @@ const AristeraMain = ({
         // value={defaultOption}
         placeholder="Quantity"
       />
-      <p className="title-drop">Country</p>
+      <p className="title-drop"> Country </p>{" "}
       <Dropdown
         options={countries}
         className="dropdown"
@@ -57,10 +76,11 @@ const AristeraMain = ({
         // value={defaultOption}
         placeholder="Country"
       />
-      {/* me thn parakato grammi feugei to dropdown me to Generation Type se periptosi poy sto proto exoume actual total generation  */}
+      {/* me thn parakato grammi feugei to dropdown me to Generation Type se periptosi poy sto proto exoume actual total generation  */}{" "}
       <div className={`${quantity === "Generation Per Type" ? "" : "d-none"}`}>
-        {/* {console.log(quantity)} */}
-        <p className="title-drop">Generation Type</p>
+        {" "}
+        {/* {console.log(quantity)} */}{" "}
+        <p className="title-drop"> Generation Type </p>{" "}
         <Dropdown
           options={types}
           className="dropdown"
@@ -71,13 +91,16 @@ const AristeraMain = ({
           // value={defaultOption}
           placeholder="Generation Type"
         />
-      </div>
+      </div>{" "}
       <br />
-      <h6 style={{ color: "red" }}>PRESS TO SEE THE NEW CHART</h6>
-      <Button variant="outline-danger">See the new chart</Button>
+      <h6 style={{ color: "red" }}> PRESS TO SEE THE NEW CHART </h6>{" "}
+      <Button variant="outline-danger" onClick={() => getCountryData()}>
+        {" "}
+        See the new chart{" "}
+      </Button>{" "}
       <Button variant="outline-dark " onClick={refreshPage}>
-        Refresh
-      </Button>
+        Refresh{" "}
+      </Button>{" "}
     </div>
   );
 };

@@ -1,10 +1,10 @@
-.Main1 {
+.Main {
     /* background-color: #eae7dc; */
     background-color: rgba(158, 191, 205, 255);
     padding-bottom: 50px;
 }
 
-.Main1 .container {
+.Main .container {
     padding-top: 0;
 }
 
@@ -81,4 +81,9 @@ hr.solid {
 
 .nav-bar {
     padding-bottom: 0px;
+}
+
+.Navbar .col-10 {
+    text-align: right;
+    padding-top: 15px;
 }

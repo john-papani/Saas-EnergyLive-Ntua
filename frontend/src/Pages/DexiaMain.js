@@ -6,18 +6,8 @@ import { Line } from "react-chartjs-2";
 import axios from "axios";
 import Chart from "chart.js/auto";
 
-const DexiaMain = ({ quantity, country, type, startDate }) => {
+const DexiaMain = ({ quantity, country, type, startDate, data,userEmail }) => {
   const ref = useRef(null);
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    async function getCountryData() {
-      const res = await axios.get(`https://jsonplaceholder.typicode.com/posts`);
-      setData(res.data);
-      // console.log(res.data);
-    }
-    getCountryData();
-  }, []);
 
   const downloadImage = useCallback(() => {
     const link = document.createElement("a");
@@ -26,6 +16,9 @@ const DexiaMain = ({ quantity, country, type, startDate }) => {
     link.click();
   }, []);
 
+  const downloadJson = () => {
+    console.log("download json file");
+  };
   return (
     <div>
       <div class="container">
@@ -51,15 +44,8 @@ const DexiaMain = ({ quantity, country, type, startDate }) => {
               <div class="col-5"> {country} </div>
             </div>
           </div>
-          {/*! ----------------------------------------------------- */}
-          {/* <div> */}
-          {/* {data.map((item) => (
-               {item}
-            ))}
-          </div> */}
-          {/*! ----------------------------------------------------- */}
           <div class="row">
-            {/* <DexiaChart ref={ref} /> */}
+            {/* ----------------Chart---------------------- */}
             <Line
               ref={ref}
               data={{
@@ -67,9 +53,9 @@ const DexiaMain = ({ quantity, country, type, startDate }) => {
 
                 datasets: [
                   {
-                    borderColor: "blue",
-                    backgroundColor: "black",
-                    label: "Cases",
+                    borderColor: "#black",
+                    backgroundColor: "#991f17",
+                    label: "Energy",
                     data: data?.map((data) => data.userId),
                     tension: 0.1,
                   },
@@ -82,8 +68,9 @@ const DexiaMain = ({ quantity, country, type, startDate }) => {
                     text: "",
                   },
                   legend: {
-                    display: true,
+                    display: false,
                     position: "bottom",
+                    
                   },
                 },
               }}
@@ -91,17 +78,21 @@ const DexiaMain = ({ quantity, country, type, startDate }) => {
               height={40}
             />
           </div>
+          {/* ------------------END OF CHART---------------------- */}
           <div class="row">
             <p> Last Update time: </p>
           </div>
+
+          {/* -------------BUTTONS TO DOWNLOAD ----------------------- */}
           <div class="row">
             <div class="col-9">
               <Button onClick={() => downloadImage()}> Download Image </Button>
             </div>
             <div class="col-3">
-              <Button> Download data </Button>
+              <Button onClick={() => downloadJson()}> Download data </Button>
             </div>
           </div>
+          {/* -------------END OF BUTTONS TO DOWNLOAD ----------------------- */}
           <div class="footer-dexia">
             <hr class="solid" />
             <div class="row">

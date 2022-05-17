@@ -13,6 +13,11 @@
     cursor: not-allowed;
 }
 
+.col-lg-7 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .col-4 a {
     text-decoration: none;
     color: black;
@@ -32,4 +37,8 @@
 
 #btn-ext a:hover {
     color: black;
+}
+
+.col-sm-5 .mb-0 {
+    font-weight: bold;
 }

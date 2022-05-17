@@ -1,9 +1,11 @@
 .LoginPage {
     text-align: center;
-    padding: 100px;
+    padding-bottom: 1000px;
+    background-color: cadetblue;
 }
 
 .google-btn {
-    height: 100px;
-    border: 10px solid red;
+    height: 300px;
+    padding-top: 100px;
+    /* border: 10px solid red; */
 }
