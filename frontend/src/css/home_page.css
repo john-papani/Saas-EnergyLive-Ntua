@@ -92,6 +92,11 @@
     font-weight: bold;
 }
 
+.footer_home a {
+    color: black;
+    font-style: italic;
+}
+
 
 /* ---------------------------------------------------------------*/
 
@@ -113,13 +118,13 @@
 }
 
 .logo-profile {
-    height: 250px;
-    width: 45px;
+    height: 260px;
+    width: auto;
 }
 
 .title-about {
     text-align: center;
-    padding-top: 10px;
+    /* padding-top: 10px; */
 }
 
 .col-sm-3 {
@@ -141,7 +146,7 @@
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #91eae4, #86a8e7, #7f7fd5);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding-bottom: 70px;
+    text-align: center;
 }
 
 .line-about {

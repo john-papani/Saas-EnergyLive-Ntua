@@ -1,0 +1,29 @@
+.NotValidlogin {
+    padding-bottom: 170px;
+    background-color: rgb(182, 208, 255);
+    text-align: center;
+}
+
+.NotValidlogin h2 {
+    padding-top: 20px;
+}
+
+.NotValidlogin h3 {
+    font-weight: bold;
+    padding-top: 50px;
+    text-decoration: underline;
+}
+
+.NotValidlogin .container {
+    padding-top: 50px;
+}
+
+.NotValidlogin a[href="/home"] {
+    text-decoration: none;
+    color: white;
+}
+
+.NotValidlogin a[href="/extend"] {
+    text-decoration: none;
+    color: black;
+}

@@ -13,11 +13,20 @@ const ExtendPlan = () => {
   const [dayextend, setDayextend] = useState(0);
   const [daysleft, setDaysleft] = useState(10);
 
+  const goback = () => {
+    console.log(sessionStorage.getItem("validlogin"));
+    if (sessionStorage.getItem("validlogin") === "true") {
+      window.location.replace("/main");
+    } else if(sessionStorage.getItem("validlogin") === "false") {
+      sessionStorage.clear();
+      window.location.replace("/home");
+    }
+  };
   return (
     <div className="ExtendPlan">
       <h1>
         Extend Page
-        <a href="/home">Home</a>
+        <a href="/main">Home</a>
       </h1>
 
       {/* PERSONAL DETAILS */}
@@ -110,8 +119,13 @@ const ExtendPlan = () => {
               </button>
             </div>
             <div class="col-sm-3">
-              <button class="btn btn-dark btn-lg" id="btn-ext" type="button">
-                <a href="/main">Cancel</a>
+              <button
+                class="btn btn-dark btn-lg"
+                id="btn-ext"
+                type="button"
+                onClick={() => goback()}
+              >
+                Cancel
               </button>
             </div>
           </div>

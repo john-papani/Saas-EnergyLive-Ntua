@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AnimatedCursor from "react-animated-cursor";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 import Home from "./Pages/Home";
 import About from "./Pages/About";
@@ -12,6 +14,9 @@ import Navbar from "./Basics/Navbar";
 import Testing from "./Pages/Testing";
 import ExtendPlan from "./Pages/ExtendPlan";
 import Legal from "./Pages/Legal";
+import NotValidlogin from "./Pages/NotValidlogin";
+import Plans from "./Pages/Plans";
+
 function App() {
   return (
     <Router>
@@ -22,6 +27,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/main" element={<Main />} />
         <Route path="/extend" element={<ExtendPlan />} />
+        <Route path="/validlogin" element={<NotValidlogin />} />
+        <Route path="/plans" element={<Plans />} />
 
         <Route path="*" element={<ErrorPage />} />
         <Route path="/test" element={<Testing />} />
