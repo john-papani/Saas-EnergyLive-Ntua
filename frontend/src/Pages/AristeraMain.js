@@ -29,7 +29,7 @@ const AristeraMain = ({
     //! analoga me to eidos tha kanei call to antistoixo API
     // if ({ quantity } === "Actual Total Load") {
     //   const res = await axios.get(
-    //     `http://localhost:3000/actual-total-load/${date}/${country}}`
+    //     `http://localhost:3000/actual-total-load/${date}/${country}/json`
     //   );
     // } else if ({ quantity } === "Generation Per Type") {
     //   const res = await axios.get(

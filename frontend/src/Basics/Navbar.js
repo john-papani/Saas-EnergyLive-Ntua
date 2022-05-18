@@ -1,14 +1,15 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/main.css";
+// import back from "../img/goback.png"
 const Navbar = () => {
   return (
     <div className="Navbar">
       <div className="container">
         <nav class="navbar">
-          {/* <a class="navbar-brand" href="/home">
-          Home page
-        </a> */}
+        {/* <a href="/home">
+        <img alt="goback" src={back} />
+      </a> */}
           <div class="col-10">
             <div className="email-nav mx-auto">
               {sessionStorage.getItem("userEmail")}

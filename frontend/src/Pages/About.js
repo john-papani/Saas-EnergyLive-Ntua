@@ -17,8 +17,8 @@ const About = () => {
           <div className="ans-about">
             We are 3 undergraduate students of school Electrical and Computer
             Engineering that we have constructed the present project with the
-            title EnergyLive2022 for the course Software as a Service, course 8th
-            semester of our school.
+            title EnergyLive2022 for the course Software as a Service, course
+            8th semester of our school.
           </div>
           <div className="q-about"> What is EnergyLive2022 ? </div>
           <div className="ans-about">
@@ -34,7 +34,7 @@ const About = () => {
               <Card.Img className="logo-profile" variant="top" src={giannis} />
               <Card.Body>
                 <Card.Title> Papanikolaou Ioannis </Card.Title>
-                <Card.Text>  contact: el18064@maill.ntua.gr </Card.Text>
+                <Card.Text> contact: el18064@maill.ntua.gr </Card.Text>
                 <Button variant="info" href="https://google.com">
                   Github
                 </Button>
@@ -46,7 +46,7 @@ const About = () => {
               <Card.Img className="logo-profile" variant="top" src={leuteris} />
               <Card.Body>
                 <Card.Title> Tsonis Eleutherios </Card.Title>
-                <Card.Text>  contact: el18004@mail.ntua.gr </Card.Text>
+                <Card.Text> contact: el18004@mail.ntua.gr </Card.Text>
                 <Button variant="info" href="https://google.com">
                   Github
                 </Button>
@@ -54,7 +54,7 @@ const About = () => {
             </Card>
           </div>
           <div class="col-sm-3 card">
-            <Card style={{ width: "18rem"}}>
+            <Card style={{ width: "18rem" }}>
               <Card.Img className="logo-profile" variant="top" src={alex} />
               <Card.Body>
                 <Card.Title> Koulakos Alexandros </Card.Title>

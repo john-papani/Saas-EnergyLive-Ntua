@@ -1,6 +1,7 @@
 import { Button } from "bootstrap";
 import React from "react";
 import "../css/legal.css"
+import back from "../img/goback.png"
 const Legal = () => {
   return (
     <div className="Legal">
@@ -30,6 +31,10 @@ const Legal = () => {
           </div>
         </div>
       </div>
+      
+      <a href="/home">
+        <img alt="goback" src={back} />
+      </a>
     </div>
   );
 };
