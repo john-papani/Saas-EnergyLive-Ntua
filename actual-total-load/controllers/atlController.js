@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 exports.get = async function (req, res) {
     try{
-        await mongoose.connect('mongodb://localhost:27017/EnergyLive');
+        await mongoose.connect('mongodb://localhost:27017/EnergyLiveATL');
         console.log("Connected to DB");
         // get date_from
         var dateFrom = req.params['date_from'];
