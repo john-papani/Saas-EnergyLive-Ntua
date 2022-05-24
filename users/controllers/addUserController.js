@@ -17,12 +17,11 @@ exports.post = async function (req, res) {
              
         // create document
         const newuser = new users({ first_name : first, last_name: last, email: addr, valid_until : today });
-        console.log(today)
         // save model to database
         newuser.save(function (err, usr) {
-            console.log('hello')
             if (err) return console.error('err');
-            console.log(newuser.first_name + " saved to collection.");
+            console.log(newuser.first_name + " " + newuser.last_name + " saved to collection.");
+            res.status(200).send('OK');
         });
 
     } catch (error) {

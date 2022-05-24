@@ -1,5 +1,5 @@
 {
-  "name": "actual-total-load",
+  "name": "aggregated-generation-per-type",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",

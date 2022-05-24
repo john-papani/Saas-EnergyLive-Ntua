@@ -1,4 +1,5 @@
 const atl = require("../models/atl");
+const { convertArrayToCSV } = require('convert-array-to-csv');
 const mongoose = require('mongoose');
 
 exports.get = async function (req, res) {
@@ -22,7 +23,31 @@ exports.get = async function (req, res) {
             var row = { 'ATLTimeStamp' : ATLTimeStamp, 'loadValue' : loadValue };
             array.push(row);
         }
-        res.status(200).send(array);
+
+        if (req.params.format == 'csv')
+        {
+            const headerCSV = [
+                'ATLTimestamp',
+                'loadValue',
+            ];
+            var dataCSV = [];
+            for (var i in array) {
+                dataCSV.push([
+                    array[i].ATLTimeStamp,
+                    array[i].loadValue
+                ]);
+            }
+            const finalCSV = convertArrayToCSV(dataCSV, {
+                header: headerCSV,
+                separator: ','
+            });
+            res.set('Content-Type', 'text/csv');
+            res.status(200).send(finalCSV);
+        }
+        else if (req.params.format == 'json')
+        {
+            res.status(200).send(array);
+        }
     } catch (error) {
         res.status(500).send("Internal Server Error")
     }

@@ -6,10 +6,8 @@ exports.get = async function (req, res) {
         await mongoose.connect('mongodb://localhost:27017/EnergyLiveUsers');
         // get date_from
         var addr = req.params['email'];
-        console.log(addr)
         // db query
         const user = await users.find({ email : addr }); 
-        console.log("after")
         var ans = { 'first_name' : user[0].first_name, 'last_name' : user[0].last_name, 'email' : user[0].email, 'valid_until' : user[0].valid_until };
         res.status(200).send(ans);
     } catch (error) {
