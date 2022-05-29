@@ -21,6 +21,11 @@ const ExtendPlan = () => {
       sessionStorage.clear();
       window.location.replace("/home");
     }
+    else
+    {
+      window.location.replace("/main");
+
+    }
   };
   return (
     <div className="ExtendPlan">

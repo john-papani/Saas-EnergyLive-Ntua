@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AnimatedCursor from "react-animated-cursor";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Main from "./Pages/Main";
 import ErrorPage from "./Pages/ErrorPage";
 import LoginPage from "./Pages/LoginPage";
-import Navbar from "./Basics/Navbar";
 import Testing from "./Pages/Testing";
 import ExtendPlan from "./Pages/ExtendPlan";
 import Legal from "./Pages/Legal";

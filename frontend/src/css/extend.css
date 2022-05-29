@@ -23,20 +23,22 @@
     color: black;
 }
 
-#btn-extend button:hover {
-    background-color: aliceblue;
-}
+
+/* #btn-extend button:hover {
+    background-color: whitesmoke;
+} */
 
 .col-4 {
     border: none;
 }
 
-#btn-ext a {
+#btn-extend button {
     color: white;
 }
 
-#btn-ext a:hover {
+#btn-extend button:hover {
     color: black;
+    background-color: whitesmoke;
 }
 
 .col-sm-5 .mb-0 {

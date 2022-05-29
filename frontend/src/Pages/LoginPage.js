@@ -1,4 +1,4 @@
-import React, { isValidElement, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { GoogleLogin } from "@react-oauth/google";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -71,10 +71,12 @@ const LoginPage = ({}) => {
 
   return (
     <div className="LoginPage">
-      <h1>react login with google</h1>
-      <h2 style={{ color: "red", letterSpacing: "30px" }}>
+      <h1>Login Page</h1>
+      <br/>
+      <h2>Please press below and sign in with your Google account </h2>
+      {/* <h2 style={{ color: "red", letterSpacing: "30px" }}>
         DISCLAIMER : TESTING YET
-      </h2>
+      </h2> */}
       <div className="google-btn">
         <GoogleOAuthProvider clientId="672456745496-5e53h43l3cpr541h8v8ac7apptcslh80.apps.googleusercontent.com">
           <GoogleLogin
