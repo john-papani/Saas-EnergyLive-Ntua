@@ -49,14 +49,14 @@ const DexiaMain = ({ quantity, country, type, startDate, data,userEmail }) => {
             <Line
               ref={ref}
               data={{
-                labels: data?.map((data) => data.id),
+                labels: data?.map((data) => data.ATLTimeStamp),
 
                 datasets: [
                   {
                     borderColor: "#black",
                     backgroundColor: "#991f17",
                     label: "Energy",
-                    data: data?.map((data) => data.userId),
+                    data: data?.map((data) => data.loadValue),
                     tension: 0.1,
                   },
                 ],

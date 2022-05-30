@@ -24,18 +24,18 @@ const AristeraMain = ({
   }
 
   async function getCountryData() {
-    const res = await axios.get(`https://jsonplaceholder.typicode.com/posts`);
+    // const res = await axios.get(`https://jsonplaceholder.typicode.com/posts`);
 
     //! analoga me to eidos tha kanei call to antistoixo API
-    // if ({ quantity } === "Actual Total Load") {
-    //   const res = await axios.get(
-    //     `http://localhost:3000/actual-total-load/${date}/${country}/json`
-    //   );
-    // } else if ({ quantity } === "Generation Per Type") {
-    //   const res = await axios.get(
-    //     `http://localhost:3001/aggregated-generation-per-type"/${date}/${country}/${type}/json`
-    //   );
-    // }
+    if ({ quantity } === "Actual Total Load") {
+      const res = await axios.get(
+        `http://localhost:3000/actual-total-load/${date}/${country}/json`
+      );
+    } else if ({ quantity } === "Generation Per Type") {
+      const res = await axios.get(
+        `http://localhost:3001/aggregated-generation-per-type"/${date}/${country}/${type}/json`
+      );
+    }
     setData(res.data);
     // console.log(res.data);
   }
