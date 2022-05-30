@@ -31,10 +31,13 @@ const AristeraMain = ({
       const res = await axios.get(
         `http://localhost:3000/actual-total-load/${date}/${country}/json`
       );
+    setData(res.data);
+
     } else if ({ quantity } === "Generation Per Type") {
       const res = await axios.get(
         `http://localhost:3001/aggregated-generation-per-type"/${date}/${country}/${type}/json`
       );
+      
     }
     setData(res.data);
     // console.log(res.data);
