@@ -5,8 +5,12 @@ import { Button } from "react-bootstrap";
 import { Line } from "react-chartjs-2";
 import axios from "axios";
 import Chart from "chart.js/auto";
+import moment from "moment";
+import zoomPlugin from 'chartjs-plugin-zoom';
 
-const DexiaMain = ({ quantity, country, type, startDate, data,userEmail }) => {
+Chart.register(zoomPlugin);
+
+const DexiaMain = ({ quantity, country, type, startDate, data, userEmail }) => {
   const ref = useRef(null);
 
   const downloadImage = useCallback(() => {
@@ -18,6 +22,14 @@ const DexiaMain = ({ quantity, country, type, startDate, data,userEmail }) => {
 
   const downloadJson = () => {
     console.log("download json file");
+    const jsonString = `data:text/json;chatset=utf-8,${encodeURIComponent(
+      JSON.stringify(data)
+    )}`;
+    const link = document.createElement("a");
+    link.href = jsonString;
+    link.download = "data.json";
+
+    link.click();
   };
   return (
     <div>
@@ -44,40 +56,111 @@ const DexiaMain = ({ quantity, country, type, startDate, data,userEmail }) => {
               <div class="col-5"> {country} </div>
             </div>
           </div>
-          <div class="row">
-            {/* ----------------Chart---------------------- */}
-            <Line
-              ref={ref}
-              data={{
-                labels: data?.map((data) => data.ATLTimeStamp),
 
-                datasets: [
-                  {
-                    borderColor: "#black",
-                    backgroundColor: "#991f17",
-                    label: "Energy",
-                    data: data?.map((data) => data.loadValue),
-                    tension: 0.1,
+          {quantity == "Generation Per Type" ? (
+            <div class="row">
+              {/* ----------------Chart---------------------- */}
+              <Line
+                ref={ref}
+                data={{
+                  labels: data?.map((data) =>
+                    moment(data.AGTTimeStamp).format("DD/MM/YYYY H:mm")
+                  ),
+
+                  datasets: [
+                    {
+                      borderColor: "#black",
+                      backgroundColor: "#991f17",
+                      label: "Energy",
+                      data: data?.map((data) => data.generationValue),
+                      tension: 0.1,
+                    },
+                  ],
+                }}
+                options={{
+                  plugins: {
+                    title: {
+                      display: false,
+                      text: "",
+                    },
+                    legend: {
+                      display: false,
+                      position: "bottom",
+                    },
+                    zoom: {
+                      zoom: {
+                        wheel: {
+                          enabled: true,
+                          modifierKey:'ctrl'
+                        },
+                        pinch: {
+                          enabled: true,
+                        },
+                        mode: "xy",
+                      },
+                    },
                   },
-                ],
-              }}
-              options={{
-                plugins: {
-                  title: {
-                    display: false,
-                    text: "",
+                }}
+                width={100}
+                height={40}
+              />
+            </div>
+          ) : (
+            ""
+          )}
+
+          {quantity == "Actual Total Load" ? (
+            <div class="row">
+              {/* ----------------ATL Chart---------------------- */}
+              <Line
+                ref={ref}
+                data={{
+                  labels: data?.map((data) =>
+                    moment(data.ATLTimeStamp).format("DD/MM/YYYY H:mm")
+                  ),
+
+                  datasets: [
+                    {
+                      borderColor: "#black",
+                      backgroundColor: "#991f17",
+                      label: "Energy",
+                      data: data?.map((data) => data.loadValue),
+                      tension: 0.1,
+                    },
+                  ],
+                }}
+                options={{
+                  plugins: {
+                    title: {
+                      display: false,
+                      text: "",
+                    },
+                    legend: {
+                      display: false,
+                      position: "bottom",
+                    },
+                    zoom: {
+                      zoom: {
+                        wheel: {
+                          enabled: true,
+                          modifierKey:'ctrl'
+
+                        },
+                        pinch: {
+                          enabled: true,
+                        },
+                        mode: "xy",
+                      },
+                    },
                   },
-                  legend: {
-                    display: false,
-                    position: "bottom",
-                    
-                  },
-                },
-              }}
-              width={100}
-              height={40}
-            />
-          </div>
+                }}
+                width={100}
+                height={40}
+              />
+            </div>
+          ) : (
+            ""
+          )}
           {/* ------------------END OF CHART---------------------- */}
           <div class="row">
             <p> Last Update time: </p>

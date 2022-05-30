@@ -22,7 +22,7 @@ const LoginPage = ({}) => {
 
   useEffect(() => {
     // async function checkvalidconnection() {
-    //   //edo me to axios tha blepo an exo valid pedio akoma gia na sunexiso sto sait
+     //!edo me to axios tha blepo an exo valid pedio akoma gia na sunexiso sto sait
     //   const res = await axios.get(`https://jsonplaceholder.typicode.com/posts`);
     //   if (res.data.__pedio_me_meres_mexri_thn_lixi > 0) {
     //     //or something like that

@@ -12,6 +12,7 @@
     padding-top: 5px;
     border: 2px solid black;
     padding-bottom: 5px;
+    text-align: center;
 }
 
 .col-9 {
@@ -23,7 +24,7 @@
 }
 
 .dropdown {
-    width: 80%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -36,8 +37,9 @@
     padding-bottom: 1px;
 }
 
-Button {
-    margin-top: 20px;
+#aristera Button {
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
 .col-7,
@@ -85,5 +87,10 @@ hr.solid {
 
 .Navbar .col-10 {
     text-align: right;
-    padding-top: 15px;
+    padding-top: 10px;
+}
+
+.Navbar .col-2 {
+    text-align: right;
+    padding-top: 10px;
 }

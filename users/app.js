@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
+app.use(cors());
 
 // Routes
 
@@ -8,6 +10,6 @@ app.use("/users", usersRoute);
 
 // HTTP Port
 
-app.listen(3002 ,() => {
-    console.log("Server is running on port 3002")
-})
+app.listen(3002, () => {
+  console.log("Server is running on port 3002");
+});

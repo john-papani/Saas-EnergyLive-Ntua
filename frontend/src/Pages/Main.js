@@ -23,9 +23,11 @@ const Main1 = ({ userEmail }) => {
               startDate={startDate}
               setStartDate={setStartDate}
               quantity={quantity}
+              country={country}
               setQuantity={setQuantity}
               setCountry={setCountry}
               setType={setType}
+              type={type}
               data={data}
               setData={setData}
             />

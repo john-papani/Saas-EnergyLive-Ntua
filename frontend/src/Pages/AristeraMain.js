@@ -12,10 +12,13 @@ import "react-dropdown/style.css";
 const AristeraMain = ({
   startDate,
   setStartDate,
+  data,
   quantity,
   setQuantity,
+  country,
   setCountry,
   setType,
+  type,
   setData,
 }) => {
   function refreshPage() {
@@ -24,24 +27,25 @@ const AristeraMain = ({
   }
 
   async function getCountryData() {
-    // const res = await axios.get(`https://jsonplaceholder.typicode.com/posts`);
-
     //! analoga me to eidos tha kanei call to antistoixo API
-    if ({ quantity } === "Actual Total Load") {
+    if ( quantity  == "Actual Total Load") {
       const res = await axios.get(
-        `http://localhost:3000/actual-total-load/${date}/${country}/json`
+        `http://localhost:3000/actual-total-load/${startDate}/${country}/json`
       );
-    setData(res.data);
+      console.log(
+        `http://localhost:3000/actual-total-load/${startDate}/${country}/json`
+      );
 
-    } else if ({ quantity } === "Generation Per Type") {
+      setData(res.data);
+    } else if (quantity == "Generation Per Type") {
       const res = await axios.get(
-        `http://localhost:3001/aggregated-generation-per-type"/${date}/${country}/${type}/json`
+        `http://localhost:3001/aggregated-generation-per-type/${startDate}/${country}/${type}/json`
       );
-      
+
+      setData(res.data);
     }
-    setData(res.data);
-    // console.log(res.data);
   }
+  console.log(data);
 
   return (
     <div className="left-col">
@@ -56,8 +60,8 @@ const AristeraMain = ({
         }}
         inline
         calendarStartDay={1}
-      />{" "}
-      <p className="title-drop"> Quantity </p>{" "}
+      />
+      <p className="title-drop"> Quantity </p>
       <Dropdown
         className="dropdown"
         options={["Actual Total Load", "Generation Per Type"]}
@@ -68,22 +72,22 @@ const AristeraMain = ({
         // value={defaultOption}
         placeholder="Quantity"
       />
-      <p className="title-drop"> Country </p>{" "}
+      <p className="title-drop"> Country </p>
       <Dropdown
         options={countries}
         className="dropdown"
         onChange={(e) => {
-          setCountry(e.value);
+          //  setCountry(e.value);
+          setCountry("GR");
           console.log(e.value);
         }}
         // value={defaultOption}
         placeholder="Country"
       />
-      {/* me thn parakato grammi feugei to dropdown me to Generation Type se periptosi poy sto proto exoume actual total generation  */}{" "}
+      {/* me thn parakato grammi feugei to dropdown me to Generation Type se periptosi poy sto proto exoume actual total generation  */}
       <div className={`${quantity === "Generation Per Type" ? "" : "d-none"}`}>
-        {" "}
-        {/* {console.log(quantity)} */}{" "}
-        <p className="title-drop"> Generation Type </p>{" "}
+        {/* {console.log(quantity)} */}
+        <p className="title-drop"> Generation Type </p>
         <Dropdown
           options={types}
           className="dropdown"
@@ -91,19 +95,17 @@ const AristeraMain = ({
             setType(e.value);
             console.log(e.value);
           }}
-          // value={defaultOption}
           placeholder="Generation Type"
         />
-      </div>{" "}
+      </div>
       <br />
-      <h6 style={{ color: "red" }}> PRESS TO SEE THE NEW CHART </h6>{" "}
+      <h6 style={{ color: "red" }}> PRESS TO SEE THE NEW CHART </h6>
       <Button variant="outline-danger" onClick={() => getCountryData()}>
-        {" "}
-        See the new chart{" "}
-      </Button>{" "}
+        See the new chart
+      </Button>
       <Button variant="outline-dark " onClick={refreshPage}>
-        Refresh{" "}
-      </Button>{" "}
+        Refresh
+      </Button>
     </div>
   );
 };
@@ -153,7 +155,6 @@ const countries = [
   "United Kingdom",
   "Russia",
   "Armenia",
-  "Azerbaijan",
   "Azerbaijan",
   "Russia",
   "Kosovo",
