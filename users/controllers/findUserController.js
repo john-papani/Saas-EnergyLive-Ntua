@@ -11,6 +11,6 @@ exports.get = async function (req, res) {
         var ans = { 'first_name' : user[0].first_name, 'last_name' : user[0].last_name, 'email' : user[0].email, 'valid_until' : user[0].valid_until };
         res.status(200).send(ans);
     } catch (error) {
-        res.status(500).send("Internal Server Error")
+        res.status(200).send([])
     }
 }
