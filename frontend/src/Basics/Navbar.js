@@ -12,12 +12,12 @@ const Navbar = () => {
       </a> */}
           <div class="col-10">
             <div className="email-nav mx-auto">
-              {sessionStorage.getItem("userEmail")}
+              {localStorage.getItem("userEmail")}
             </div>
           </div>
           <div className="col-2">
             <button class="btn  ms-auto" type="submit">
-              <a href="/home" onClick={() => sessionStorage.clear()}>
+              <a href="/home" onClick={() => localStorage.clear()}>
                 {" "}
                 Sign Out
               </a>

@@ -9,7 +9,7 @@ const Home = () => {
     <div className="Home">
       <img className="logo_home" src={logo} alt="Logo" />
       <h1 className="title_home"> EnergyLive 2022 </h1>
-      <h3>{sessionStorage.getItem("userEmail")}</h3>
+      <h3>{localStorage.getItem("userEmail")}</h3>
       <Link to="/login">
         <button className="google_button">Sign in with Google</button>{" "}
       </Link>

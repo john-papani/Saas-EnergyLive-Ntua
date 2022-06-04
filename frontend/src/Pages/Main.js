@@ -5,7 +5,7 @@ import "../css/main.css";
 import AristeraMain from "./AristeraMain";
 import DexiaMain from "./DexiaMain";
 import Navbar from "../Basics/Navbar";
-const Main1 = ({ userEmail }) => {
+const Main = () => {
   const [startDate, setStartDate] = useState(
     new Date("01-01-2022").setHours(0, 0, 0, 0)
   );
@@ -39,7 +39,6 @@ const Main1 = ({ userEmail }) => {
               type={type}
               startDate={startDate}
               data={data}
-              userEmail={userEmail}
             />
           </div>
         </div>
@@ -48,4 +47,4 @@ const Main1 = ({ userEmail }) => {
   );
 };
 
-export default Main1;
+export default Main;

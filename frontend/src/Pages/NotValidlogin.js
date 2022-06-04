@@ -11,7 +11,7 @@ const NotValidlogin = () => {
         <div class="row">
           <div class="col">
             <h4>Try with other google account</h4>
-            <button class="btn btn-success btn-lg" onClick={() => sessionStorage.clear()} >
+            <button class="btn btn-success btn-lg" onClick={() => localStorage.clear()} >
               <a href="/home" >HOME</a>
             </button>
           </div>

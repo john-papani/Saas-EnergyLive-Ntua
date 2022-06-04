@@ -21,6 +21,10 @@ const AristeraMain = ({
   type,
   setData,
 }) => {
+
+
+  const[countryLabel,setCountryLabel] = useState("");
+
   function refreshPage() {
     alert("BE Careful RELOAD page!");
     window.location.reload(false);
@@ -28,25 +32,30 @@ const AristeraMain = ({
 
   async function getCountryData() {
     //! analoga me to eidos tha kanei call to antistoixo API
-    if ( quantity  == "Actual Total Load") {
+    if (quantity == "Actual Total Load") {
       const res = await axios.get(
-        `http://localhost:3000/actual-total-load/${startDate}/${country}/json`
+        `http://localhost:3000/actual-total-load/${startDate}/${countryLabel}/json`
       );
       console.log(
-        `http://localhost:3000/actual-total-load/${startDate}/${country}/json`
+        `http://localhost:3000/actual-total-load/${startDate}/${countryLabel}/json`
       );
 
       setData(res.data);
     } else if (quantity == "Generation Per Type") {
       const res = await axios.get(
-        `http://localhost:3001/aggregated-generation-per-type/${startDate}/${country}/${type}/json`
+        `http://localhost:3001/aggregated-generation-per-type/${startDate}/${countryLabel}/${type}/json`
       );
 
       setData(res.data);
     }
   }
-  console.log(data);
 
+
+  const handleChangeCountry =(name) =>{
+    setCountry(name);
+    let label = countryNames.find(countryName=>countryName.Country==name)
+    setCountryLabel(label.MapCode)
+  }
   return (
     <div className="left-col">
       <DatePicker
@@ -74,19 +83,16 @@ const AristeraMain = ({
       />
       <p className="title-drop"> Country </p>
       <Dropdown
-        options={countries}
+        options={countryNames.map((countryName) => countryName.Country)}
         className="dropdown"
         onChange={(e) => {
-          //  setCountry(e.value);
-          setCountry("GR");
-          console.log(e.value);
+         handleChangeCountry(e.value)
         }}
         // value={defaultOption}
         placeholder="Country"
       />
       {/* me thn parakato grammi feugei to dropdown me to Generation Type se periptosi poy sto proto exoume actual total generation  */}
       <div className={`${quantity === "Generation Per Type" ? "" : "d-none"}`}>
-        {/* {console.log(quantity)} */}
         <p className="title-drop"> Generation Type </p>
         <Dropdown
           options={types}
@@ -112,53 +118,195 @@ const AristeraMain = ({
 
 export default AristeraMain;
 
-const countries = [
-  "Albania",
-  "Austria",
-  "Belarus",
-  "Belgium",
-  "Bosnia Herzegovina",
-  "Bulgaria",
-  "Croatia",
-  "Cyprus",
-  "Czech Republic",
-  "Denmark",
-  "Estonia",
-  "Finland",
-  "France",
-  "Georgia",
-  "Germany",
-  "Greece",
-  "Hungary",
-  "Ireland",
-  "Italy",
-  "Latvia",
-  "Lithuania",
-  "Luxembourg",
-  "Malta",
-  "Montenegro",
-  "Netherlands",
-  "North Macedonia",
-  "Norway",
-  "Poland",
-  "Portugal",
-  "Republic of Moldova",
-  "Romania",
-  "Serbia",
-  "Slovakia",
-  "Slovenia",
-  "Spain",
-  "Sweden",
-  "Switzerland",
-  "Turkey",
-  "Ukraine",
-  "United Kingdom",
-  "Russia",
-  "Armenia",
-  "Azerbaijan",
-  "Russia",
-  "Kosovo",
-  "Armenia",
+const countryNames = [
+  {
+    Country: "Albania",
+    MapCode: "AL",
+  },
+  {
+    Country: "Austria",
+    MapCode: "AT",
+  },
+  {
+    Country: "Belarus",
+    MapCode: "BY",
+  },
+  {
+    Country: "Belgium",
+    MapCode: "BE",
+  },
+  {
+    Country: "Bosnia Herzegovina",
+    MapCode: "BA",
+  },
+  {
+    Country: "Bulgaria",
+    MapCode: "BG",
+  },
+  {
+    Country: "Croatia",
+    MapCode: "HR",
+  },
+  {
+    Country: "Cyprus",
+    MapCode: "CY",
+  },
+  {
+    Country: "Czech Republic",
+    MapCode: "CZ",
+  },
+  {
+    Country: "Denmark",
+    MapCode: "DK",
+  },
+  {
+    Country: "Estonia",
+    MapCode: "EE",
+  },
+  {
+    Country: "Finland",
+    MapCode: "FI",
+  },
+  {
+    Country: "France",
+    MapCode: "FR",
+  },
+  {
+    Country: "Georgia",
+    MapCode: "GE",
+  },
+  {
+    Country: "Germany",
+    MapCode: "DE",
+  },
+  {
+    Country: "Greece",
+    MapCode: "GR",
+  },
+  {
+    Country: "Hungary",
+    MapCode: "HU",
+  },
+  {
+    Country: "Ireland",
+    MapCode: "IE",
+  },
+  {
+    Country: "Italy",
+    MapCode: "IT",
+  },
+  {
+    Country: "Latvia",
+    MapCode: "LV",
+  },
+  {
+    Country: "Lithuania",
+    MapCode: "LT",
+  },
+  {
+    Country: "Luxembourg",
+    MapCode: "LU",
+  },
+  {
+    Country: "Malta",
+    MapCode: "MT",
+  },
+  {
+    Country: "Montenegro",
+    MapCode: "ME",
+  },
+  {
+    Country: "Netherlands",
+    MapCode: "NL",
+  },
+  {
+    Country: "North Macedonia",
+    MapCode: "MK",
+  },
+  {
+    Country: "Norway",
+    MapCode: "NO",
+  },
+  {
+    Country: "Poland",
+    MapCode: "PL",
+  },
+  {
+    Country: "Portugal",
+    MapCode: "PT",
+  },
+  {
+    Country: "Republic of Moldova",
+    MapCode: "MD",
+  },
+  {
+    Country: "Romania",
+    MapCode: "RO",
+  },
+  {
+    Country: "Serbia",
+    MapCode: "RS",
+  },
+  {
+    Country: "Slovakia",
+    MapCode: "SK",
+  },
+  {
+    Country: "Slovenia",
+    MapCode: "SI",
+  },
+  {
+    Country: "Spain",
+    MapCode: "ES",
+  },
+  {
+    Country: "Sweden",
+    MapCode: "SE",
+  },
+  {
+    Country: "Switzerland",
+    MapCode: "CH",
+  },
+  {
+    Country: "Turkey",
+    MapCode: "TR",
+  },
+  {
+    Country: "Ukraine",
+    MapCode: "UA",
+  },
+  {
+    Country: "United Kingdom",
+    MapCode: "GB",
+  },
+  {
+    Country: "Russia",
+    MapCode: "RU",
+  },
+  {
+    Country: "Armenia",
+    MapCode: "AM",
+  },
+  {
+    Country: "Azerbaijan",
+    MapCode: "AZ",
+  },
+  {
+    Country: "Azerbaijan",
+    MapCode: "AZ",
+  },
+  {
+    Country: "Russia",
+    MapCode: "RU",
+  },
+  {
+    Country: "Kosovo",
+    MapCode: "XK",
+  },
+  {
+    Country: "Armenia",
+    MapCode: "AM",
+  },
 ];
 
 const types = [

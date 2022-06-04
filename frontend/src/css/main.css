@@ -1,7 +1,9 @@
 .Main {
     /* background-color: #eae7dc; */
     background-color: rgba(158, 191, 205, 255);
-    padding-bottom: 50px;
+    height: auto !important;
+    min-height: 100%;
+    padding-bottom: 60px;
 }
 
 .Main .container {
@@ -65,6 +67,13 @@ hr.solid {
 
 .col-sm-3 {
     margin-top: 0px;
+}
+
+.dexia-footer {
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    padding-bottom: 2%;
 }
 
 

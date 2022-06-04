@@ -6,12 +6,25 @@ import { Line } from "react-chartjs-2";
 import axios from "axios";
 import Chart from "chart.js/auto";
 import moment from "moment";
-import zoomPlugin from 'chartjs-plugin-zoom';
-
+import zoomPlugin from "chartjs-plugin-zoom";
 Chart.register(zoomPlugin);
 
 const DexiaMain = ({ quantity, country, type, startDate, data, userEmail }) => {
   const ref = useRef(null);
+  const [daysuntil, setDaysUntil] = useState(0);
+  //! NA FTIAXO MIA SUNARTISI POY NA THN LEO finddaysLeft se enα component oste na thn kano import kai alloy poy thelo
+  useEffect(() => {
+    async function daysLeft() {
+      const res = await axios.get(
+        `http://localhost:3002/users/find/${localStorage.getItem('userEmail')}`
+      );
+
+      let dateuser = await res.data.valid_until;
+      let x1 = moment(dateuser, "YYYY/MM/DD").fromNow();
+      setDaysUntil(x1);
+    }
+    daysLeft();
+  }, []);
 
   const downloadImage = useCallback(() => {
     const link = document.createElement("a");
@@ -57,7 +70,7 @@ const DexiaMain = ({ quantity, country, type, startDate, data, userEmail }) => {
             </div>
           </div>
 
-          {quantity == "Generation Per Type" ? (
+          {data && quantity == "Generation Per Type" ? (
             <div class="row">
               {/* ----------------Chart---------------------- */}
               <Line
@@ -91,7 +104,7 @@ const DexiaMain = ({ quantity, country, type, startDate, data, userEmail }) => {
                       zoom: {
                         wheel: {
                           enabled: true,
-                          modifierKey:'ctrl'
+                          modifierKey: "ctrl",
                         },
                         pinch: {
                           enabled: true,
@@ -109,7 +122,7 @@ const DexiaMain = ({ quantity, country, type, startDate, data, userEmail }) => {
             ""
           )}
 
-          {quantity == "Actual Total Load" ? (
+          {data && quantity == "Actual Total Load" ? (
             <div class="row">
               {/* ----------------ATL Chart---------------------- */}
               <Line
@@ -143,8 +156,7 @@ const DexiaMain = ({ quantity, country, type, startDate, data, userEmail }) => {
                       zoom: {
                         wheel: {
                           enabled: true,
-                          modifierKey:'ctrl'
-
+                          modifierKey: "ctrl",
                         },
                         pinch: {
                           enabled: true,
@@ -162,30 +174,35 @@ const DexiaMain = ({ quantity, country, type, startDate, data, userEmail }) => {
             ""
           )}
           {/* ------------------END OF CHART---------------------- */}
-          <div class="row">
-            <p> Last Update time: </p>
-          </div>
-
-          {/* -------------BUTTONS TO DOWNLOAD ----------------------- */}
-          <div class="row">
-            <div class="col-9">
-              <Button onClick={() => downloadImage()}> Download Image </Button>
-            </div>
-            <div class="col-3">
-              <Button onClick={() => downloadJson()}> Download data </Button>
-            </div>
-          </div>
-          {/* -------------END OF BUTTONS TO DOWNLOAD ----------------------- */}
-          <div class="footer-dexia">
-            <hr class="solid" />
+          <div className="dexia-footer">
             <div class="row">
-              <div class="col-sm-3"> Service Status: </div>
-              <div class="col-sm-3"> Days Left: </div>
-              <div class="col-sm-3">
-                <a href="/extend"> Extend Plan </a>
+              <p> Last Update time: </p>
+            </div>
+
+            {/* -------------BUTTONS TO DOWNLOAD ----------------------- */}
+            <div class="row">
+              <div class="col-9">
+                <Button onClick={() => downloadImage()}>
+                  {" "}
+                  Download Image{" "}
+                </Button>
               </div>
-              <div class="col-sm-3">
-                <a href="/about"> About </a>
+              <div class="col-3">
+                <Button onClick={() => downloadJson()}> Download data </Button>
+              </div>
+            </div>
+            {/* -------------END OF BUTTONS TO DOWNLOAD ----------------------- */}
+            <div class="footer-dexia">
+              <hr class="solid" />
+              <div class="row">
+                <div class="col-sm-3"> Service Status: </div>
+                <div class="col-sm-3"> Days Left: {daysuntil}</div>
+                <div class="col-sm-3">
+                  <a href="/extend"> Extend Plan </a>
+                </div>
+                <div class="col-sm-3">
+                  <a href="/about"> About </a>
+                </div>
               </div>
             </div>
           </div>
