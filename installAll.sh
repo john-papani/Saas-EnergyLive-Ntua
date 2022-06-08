@@ -9,5 +9,8 @@ npm install
 cd ../users
 npm install
 
+cd ../cascade-lists
+npm install
+
 cd ../frontend
 npm install

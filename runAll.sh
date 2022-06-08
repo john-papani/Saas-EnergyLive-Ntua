@@ -1,4 +1,4 @@
-node ./actual-total-load/app.js  & node ./aggregated-generation-per-type/app.js  & node ./users/app.js 
+node ./actual-total-load/app.js  & node ./aggregated-generation-per-type/app.js  & node ./users/app.js  & node ./cascade-lists/app.js 
 # gia termatismo == se CMD as administration trexoume 
 # taskkill /F /IM node.exe
 # 
