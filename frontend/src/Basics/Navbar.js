@@ -18,7 +18,6 @@ const Navbar = () => {
           <div className="col-2">
             <button class="btn  ms-auto" type="submit">
               <a href="/home" onClick={() => localStorage.clear()}>
-                {" "}
                 Sign Out
               </a>
             </button>

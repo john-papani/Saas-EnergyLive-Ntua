@@ -9,14 +9,23 @@ import moment from "moment";
 import zoomPlugin from "chartjs-plugin-zoom";
 Chart.register(zoomPlugin);
 
-const DexiaMain = ({ quantity, country, type, startDate, data, userEmail, update }) => {
+const DexiaMain = ({
+  quantity,
+  country,
+  type,
+  startDate,
+  data,
+  userEmail,
+  update,
+  showlastUpdate,
+}) => {
   const ref = useRef(null);
   const [daysuntil, setDaysUntil] = useState(0);
   //! NA FTIAXO MIA SUNARTISI POY NA THN LEO finddaysLeft se enα component oste na thn kano import kai alloy poy thelo
   useEffect(() => {
     async function daysLeft() {
       const res = await axios.get(
-        `http://localhost:3002/users/find/${localStorage.getItem('userEmail')}`
+        `http://localhost:3002/users/find/${localStorage.getItem("userEmail")}`
       );
 
       let dateuser = await res.data.valid_until;
@@ -176,16 +185,18 @@ const DexiaMain = ({ quantity, country, type, startDate, data, userEmail, update
           {/* ------------------END OF CHART---------------------- */}
           <div className="dexia-footer">
             <div class="row">
-              <p> Last Update time: {update?.map(moment(update).format("DD/MM/YYYY H:mm"))} </p>
+              <p>
+                Last Update time:
+                {showlastUpdate && update
+                  ? moment(update).format("MM/DD/YYYY H:mm")
+                  : ""}
+              </p>
             </div>
 
             {/* -------------BUTTONS TO DOWNLOAD ----------------------- */}
             <div class="row">
               <div class="col-9">
-                <Button onClick={() => downloadImage()}>
-                  {" "}
-                  Download Image{" "}
-                </Button>
+                <Button onClick={() => downloadImage()}>Download Image</Button>
               </div>
               <div class="col-3">
                 <Button onClick={() => downloadJson()}> Download data </Button>
@@ -195,7 +206,7 @@ const DexiaMain = ({ quantity, country, type, startDate, data, userEmail, update
             <div class="footer-dexia">
               <hr class="solid" />
               <div class="row">
-                <div class="col-sm-3"> Service Status: </div>
+                <div class="col-sm-3"> Service Status: Active </div>
                 <div class="col-sm-3"> Days Left: {daysuntil}</div>
                 <div class="col-sm-3">
                   <a href="/extend"> Extend Plan </a>

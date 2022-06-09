@@ -11,10 +11,10 @@ const Home = () => {
       <h1 className="title_home"> EnergyLive 2022 </h1>
       <h3>{localStorage.getItem("userEmail")}</h3>
       <Link to="/login">
-        <button className="google_button">Sign in with Google</button>{" "}
+        <button className="google_button">Sign in with Google</button>
       </Link>
       {/* <Link to="/main">
-        <button className="google_button">main</button>{" "}
+        <button className="google_button">main</button>
       </Link> */}
       <div class="wrapper">
         <div class="divider div-transparent"></div>

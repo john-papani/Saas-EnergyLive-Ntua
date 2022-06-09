@@ -21,11 +21,10 @@ const AristeraMain = ({
   type,
   setData,
   update,
-  setUpdate
+  setUpdate,
+  setShowlastUpdate,
 }) => {
-
-
-  const[countryLabel,setCountryLabel] = useState("");
+  const [countryLabel, setCountryLabel] = useState("");
 
   function refreshPage() {
     alert("BE Careful RELOAD page!");
@@ -38,40 +37,28 @@ const AristeraMain = ({
       const res = await axios.get(
         `http://localhost:3000/actual-total-load/${startDate}/${countryLabel}/json`
       );
-      console.log(
-        `http://localhost:3000/actual-total-load/${startDate}/${countryLabel}/json`
-      );
-
-      setData(res.data);
-
       const res2 = await axios.get(
         `http://localhost:3000/actual-total-load/Update/${startDate}/${countryLabel}`
       );
-      console.log(res2);
-
-      setUpdate(res2.update);
-
+      setData(res.data);
+      setUpdate(res2.data);
     } else if (quantity == "Generation Per Type") {
       const res = await axios.get(
         `http://localhost:3001/aggregated-generation-per-type/${startDate}/${countryLabel}/${type}/json`
       );
-
-      setData(res.data);
-
       const res2 = await axios.get(
         `http://localhost:3001/aggregated-generation-per-type/Update/${startDate}/${countryLabel}/${type}`
       );
-
-      setUpdate(res2.update)
+      setData(res.data);
+      setUpdate(res2.data);
     }
   }
 
-
-  const handleChangeCountry =(name) =>{
+  const handleChangeCountry = (name) => {
     setCountry(name);
-    let label = countryNames.find(countryName=>countryName.Country==name)
-    setCountryLabel(label.MapCode)
-  }
+    let label = countryNames.find((countryName) => countryName.Country == name);
+    setCountryLabel(label.MapCode);
+  };
   return (
     <div className="left-col">
       <DatePicker
@@ -92,6 +79,7 @@ const AristeraMain = ({
         options={["Actual Total Load", "Generation Per Type"]}
         onChange={(e) => {
           setQuantity(e.value);
+          setShowlastUpdate(false);
           console.log(e.value);
         }}
         // value={defaultOption}
@@ -102,7 +90,8 @@ const AristeraMain = ({
         options={countryNames.map((countryName) => countryName.Country)}
         className="dropdown"
         onChange={(e) => {
-         handleChangeCountry(e.value)
+          setShowlastUpdate(false);
+          handleChangeCountry(e.value);
         }}
         // value={defaultOption}
         placeholder="Country"
@@ -115,6 +104,7 @@ const AristeraMain = ({
           className="dropdown"
           onChange={(e) => {
             setType(e.value);
+            setShowlastUpdate(false);
             console.log(e.value);
           }}
           placeholder="Generation Type"
@@ -122,7 +112,14 @@ const AristeraMain = ({
       </div>
       <br />
       <h6 style={{ color: "red" }}> PRESS TO SEE THE NEW CHART </h6>
-      <Button variant="outline-danger" onClick={() => getCountryData()}>
+
+      <Button
+        variant="outline-danger"
+        onClick={() => {
+          getCountryData();
+          setShowlastUpdate(true);
+        }}
+      >
         See the new chart
       </Button>
       <Button variant="outline-dark " onClick={refreshPage}>
