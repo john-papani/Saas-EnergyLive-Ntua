@@ -49,7 +49,7 @@ const AristeraMain = ({
       );
       console.log(res2);
 
-      setUpdate(res2.data);
+      setUpdate(res2.update);
 
     } else if (quantity == "Generation Per Type") {
       const res = await axios.get(
