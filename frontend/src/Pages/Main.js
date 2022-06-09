@@ -13,6 +13,7 @@ const Main = () => {
   const [country, setCountry] = useState();
   const [type, setType] = useState();
   const [data, setData] = useState([]);
+  const [update, setUpdate] = useState();
   return (
     <div className="Main">
       <Navbar />
@@ -30,6 +31,7 @@ const Main = () => {
               type={type}
               data={data}
               setData={setData}
+              setUpdate={setUpdate}
             />
           </div>
           <div class="col-8">
@@ -39,6 +41,7 @@ const Main = () => {
               type={type}
               startDate={startDate}
               data={data}
+              update={update}
             />
           </div>
         </div>

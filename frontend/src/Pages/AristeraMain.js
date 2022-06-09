@@ -20,6 +20,8 @@ const AristeraMain = ({
   setType,
   type,
   setData,
+  update,
+  setUpdate
 }) => {
 
 
@@ -41,12 +43,26 @@ const AristeraMain = ({
       );
 
       setData(res.data);
+
+      const res2 = await axios.get(
+        `http://localhost:3000/actual-total-load/Update/${startDate}/${countryLabel}`
+      );
+      console.log(res2);
+
+      setUpdate(res2.data);
+
     } else if (quantity == "Generation Per Type") {
       const res = await axios.get(
         `http://localhost:3001/aggregated-generation-per-type/${startDate}/${countryLabel}/${type}/json`
       );
 
       setData(res.data);
+
+      const res2 = await axios.get(
+        `http://localhost:3001/aggregated-generation-per-type/Update/${startDate}/${countryLabel}/${type}`
+      );
+
+      setUpdate(res2.update)
     }
   }
 

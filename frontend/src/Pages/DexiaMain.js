@@ -9,7 +9,7 @@ import moment from "moment";
 import zoomPlugin from "chartjs-plugin-zoom";
 Chart.register(zoomPlugin);
 
-const DexiaMain = ({ quantity, country, type, startDate, data, userEmail }) => {
+const DexiaMain = ({ quantity, country, type, startDate, data, userEmail, update }) => {
   const ref = useRef(null);
   const [daysuntil, setDaysUntil] = useState(0);
   //! NA FTIAXO MIA SUNARTISI POY NA THN LEO finddaysLeft se enα component oste na thn kano import kai alloy poy thelo
@@ -176,7 +176,7 @@ const DexiaMain = ({ quantity, country, type, startDate, data, userEmail }) => {
           {/* ------------------END OF CHART---------------------- */}
           <div className="dexia-footer">
             <div class="row">
-              <p> Last Update time: </p>
+              <p> Last Update time: {update?.map(moment(update).format("DD/MM/YYYY H:mm"))} </p>
             </div>
 
             {/* -------------BUTTONS TO DOWNLOAD ----------------------- */}
