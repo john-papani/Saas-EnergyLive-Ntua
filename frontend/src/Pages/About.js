@@ -35,7 +35,7 @@ const About = () => {
               <Card.Body>
                 <Card.Title> Papanikolaou Ioannis </Card.Title>
                 <Card.Text> contact: el18064@maill.ntua.gr </Card.Text>
-                <Button variant="info" href="https://google.com">
+                <Button variant="info" href="https://github.com/john-papani">
                   Github
                 </Button>
               </Card.Body>
@@ -47,7 +47,7 @@ const About = () => {
               <Card.Body>
                 <Card.Title> Tsonis Eleutherios </Card.Title>
                 <Card.Text> contact: el18004@mail.ntua.gr </Card.Text>
-                <Button variant="info" href="https://google.com">
+                <Button variant="info" href="https://github.com/el18004">
                   Github
                 </Button>
               </Card.Body>
@@ -59,7 +59,7 @@ const About = () => {
               <Card.Body>
                 <Card.Title> Koulakos Alexandros </Card.Title>
                 <Card.Text> contact: el18144@mail.ntua.gr </Card.Text>
-                <Button variant="info" href="https://google.com">
+                <Button variant="info" href="https://github.com/AlexandrosKoulakos/">
                   Github
                 </Button>
               </Card.Body>

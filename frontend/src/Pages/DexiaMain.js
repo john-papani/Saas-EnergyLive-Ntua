@@ -79,7 +79,7 @@ const DexiaMain = ({
             </div>
           </div>
 
-          {data && quantity == "Generation Per Type" ? (
+          {data && quantity === "Generation Per Type" ? (
             <div class="row">
               {/* ----------------Chart---------------------- */}
               <Line
@@ -131,7 +131,7 @@ const DexiaMain = ({
             ""
           )}
 
-          {data && quantity == "Actual Total Load" ? (
+          {data && quantity === "Actual Total Load" ? (
             <div class="row">
               {/* ----------------ATL Chart---------------------- */}
               <Line
@@ -188,7 +188,7 @@ const DexiaMain = ({
               <p>
                 Last Update time:
                 {showlastUpdate && update
-                  ? moment(update).format("MM/DD/YYYY H:mm")
+                  ? moment(update).format("DD/MM/YYYY H:mm")
                   : ""}
               </p>
             </div>
