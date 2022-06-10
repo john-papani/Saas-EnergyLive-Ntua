@@ -25,7 +25,8 @@ const AristeraMain = ({
   setShowlastUpdate,
 }) => {
   const [countryLabel, setCountryLabel] = useState("");
-
+  const [typesByCountry, setTypesByCountry] = useState([]);
+  const [countriesByQuality, setCountriesByQuality] = useState([]);
   function refreshPage() {
     alert("BE Careful RELOAD page!");
     window.location.reload(false);
@@ -33,7 +34,7 @@ const AristeraMain = ({
 
   async function getCountryData() {
     //! analoga me to eidos tha kanei call to antistoixo API
-    if (quantity == "Actual Total Load") {
+    if (quantity === "Actual Total Load") {
       const res = await axios.get(
         `http://localhost:3000/actual-total-load/${startDate}/${countryLabel}/json`
       );
@@ -42,7 +43,7 @@ const AristeraMain = ({
       );
       setData(res.data);
       setUpdate(res2.data);
-    } else if (quantity == "Generation Per Type") {
+    } else if (quantity === "Generation Per Type") {
       const res = await axios.get(
         `http://localhost:3001/aggregated-generation-per-type/${startDate}/${countryLabel}/${type}/json`
       );
@@ -56,9 +57,33 @@ const AristeraMain = ({
 
   const handleChangeCountry = (name) => {
     setCountry(name);
-    let label = countryNames.find((countryName) => countryName.Country == name);
+    let label = countryNames.find(
+      (countryName) => countryName.Country === name
+    );
     setCountryLabel(label.MapCode);
   };
+  useEffect(() => {
+    async function getCountriesByQuality() {
+      const res = await axios.get(
+        `http://localhost:3003/cascade-lists/filter-countries/${quantity}`
+      );
+      console.log(res.data);
+      setCountriesByQuality(res.data);
+    }
+    getCountriesByQuality();
+  }, [quantity]);
+
+  useEffect(() => {
+    async function getTypesByCountry() {
+      const res = await axios.get(
+        `http://localhost:3003/cascade-lists/filter-production-type/${countryLabel}`
+      );
+      console.log(res.data);
+      setTypesByCountry(res.data);
+    }
+    getTypesByCountry();
+  }, [country]);
+
   return (
     <div className="left-col">
       <DatePicker
@@ -87,7 +112,11 @@ const AristeraMain = ({
       />
       <p className="title-drop"> Country </p>
       <Dropdown
-        options={countryNames.map((countryName) => countryName.Country)}
+        options={countriesByQuality.map(
+          (country_name) => country_name
+          // countryNames.find((x) => x.MapCode === code.AreaTypeCode).Country
+        )}
+        // options={countriesByQuality.map((countryName) => countryName.Country)}
         className="dropdown"
         onChange={(e) => {
           setShowlastUpdate(false);
@@ -100,7 +129,7 @@ const AristeraMain = ({
       <div className={`${quantity === "Generation Per Type" ? "" : "d-none"}`}>
         <p className="title-drop"> Generation Type </p>
         <Dropdown
-          options={types}
+          options={typesByCountry.map((type) => type)}
           className="dropdown"
           onChange={(e) => {
             setType(e.value);
@@ -322,25 +351,25 @@ const countryNames = [
   },
 ];
 
-const types = [
-  "Biomass",
-  "Fossil Brown coal/Lignite",
-  "Fossil Coal-derived gas",
-  "Fossil Gas",
-  "Fossil Hard coal",
-  "Fossil Oil",
-  "Fossil Oil shale",
-  "Fossil Peat",
-  "Geothermal",
-  "Hydro Pumped Storage",
-  "Hydro Run-of-river and poundage",
-  "Hydro Water Reservoir",
-  "Marine",
-  "Nuclear",
-  "Other",
-  "Other renewable",
-  "Solar",
-  "Waste",
-  "Wind Offshore",
-  "Wind Onshore",
-];
+// const types = [
+//   "Biomass",
+//   "Fossil Brown coal/Lignite",
+//   "Fossil Coal-derived gas",
+//   "Fossil Gas",
+//   "Fossil Hard coal",
+//   "Fossil Oil",
+//   "Fossil Oil shale",
+//   "Fossil Peat",
+//   "Geothermal",
+//   "Hydro Pumped Storage",
+//   "Hydro Run-of-river and poundage",
+//   "Hydro Water Reservoir",
+//   "Marine",
+//   "Nuclear",
+//   "Other",
+//   "Other renewable",
+//   "Solar",
+//   "Waste",
+//   "Wind Offshore",
+//   "Wind Onshore",
+// ];
