@@ -2,10 +2,23 @@
 
 ## FRONTEND
 
-![under_construction_photo](https://repository-images.githubusercontent.com/287795441/46ba8880-df57-11ea-8b79-54878a29a02f)
+<!-- ![under_construction_photo](https://repository-images.githubusercontent.com/287795441/46ba8880-df57-11ea-8b79-54878a29a02f) -->
 
 
 
+![NodeJS](https://img.shields.io/badge/nodeJS-v15.5+-green.svg)
+![Axios](https://img.shields.io/badge/axios-v0.24.0+-blue.svg)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-v4.6+-green.svg)
+![Chartjs](https://img.shields.io/badge/ChartJS-3.7.1-blue)
+
+Το frontend αναπτύχθηκε με [__React Js__](https://reactjs.org) και μερικές απο τις βιβλιοθήκες που περιέχει.
+Χρησιμοποιήθηκε τόσο του [Chartjs](https://www.chartjs.org) για γραφήματα όσο και του [Bootstrap](https://getbootstrap.com) για την μορφοποιήση της ιστοσελίδας μας. 
+
+### Εγκατάσταση
+> _Συνέχιστε μόνο αν δεν έχεις τρέξει τα script που βρίσκονται στο κεντρικό [ReadME](https://github.com/ntua/saas2022-10#ntua-ece-saas-2022-project)_
+
+1) στον φάκελο του frontent, τρέχουμε `npm install`
+2) `npm start`
 
 
 <details><summary> Getting Started with Create React App - README REACT  </summary>

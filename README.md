@@ -1,9 +1,8 @@
 # NTUA ECE SAAS 2022 PROJECT
   
 ## TEAM 10
-  
 
-<details><summary> Οδηγίες εγκατάστασης εφαρμογής </summary>
+ <details><summary> Οδηγίες εγκατάστασης εφαρμογής </summary>
 <p>
 
 1) Σε ένα terminal τρέχουμε την εντολή `./installAll.sh`, η οποία κάνει install τα απαραίτητα dependencies στους φακέλους actual-total-load, aggregated-generation-per-type, users, cascade-lists και frontend.
@@ -12,8 +11,13 @@
 </p>
 </details>
 
+![HomePage](./frontend/src/img/homepage.png)
+![ActualTotalLoad](frontend/src/img/actualtotalPage.png)
+![GenerationPerType](frontend/src/img/generationpertypePage.png)
+![AbouPage](./frontend/src/img/aboupage.png)
 
-<br /><br /><br />
+
+
 
   
   
