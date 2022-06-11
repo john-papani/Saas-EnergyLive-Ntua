@@ -1,16 +1,15 @@
 const express = require("express");
 const app = express();
-const cors = require("cors")
-app.use(cors())
+const cors = require("cors");
+app.use(cors());
 
 // Routes
-
 
 const atlRoute = require("./routes/atlRoute");
 app.use("/actual-total-load", atlRoute);
 
 // HTTP Port
 
-app.listen(3000 ,() => {
-    console.log("Server is running on port 3000")
-})
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Server is running on port, ", process.env.PORT || 3000);
+});

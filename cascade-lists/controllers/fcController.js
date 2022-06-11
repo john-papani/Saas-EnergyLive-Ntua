@@ -6,7 +6,9 @@ const mongoose = require('mongoose');
 
 exports.get = async function (req, res) {
     try{
-        await mongoose.connect('mongodb://localhost:27017/EnergyLiveCascade');
+        // await mongoose.connect('mongodb://localhost:27017/EnergyLiveCascade');
+        await mongoose.connect('mongodb+srv://saasteam10:7oK3fIkTNG4Z18vg@energylive2022.fsgid.mongodb.net/EnergyLiveCascade?retryWrites=true&w=majority')
+
         console.log("Connected to DB");
         
         // Get quantity type
