@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-const ATLSchema = mongoose.Schema({
-    AreaTypeCode: {
+const CountriesSchema = mongoose.Schema({
+    Country: {
         type: String,
         required: true
     },
@@ -11,4 +11,4 @@ const ATLSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('atl', ATLSchema, 'atl');
+module.exports = mongoose.model('countries', CountriesSchema, 'countries');

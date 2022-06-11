@@ -11,5 +11,5 @@ app.use("/users", usersRoute);
 // HTTP Port
 
 app.listen(process.env.PORT || 3002, () => {
-  console.log("Server is running on port, ", process.env.PORT || 3002);
+  console.log("Server is running on port", process.env.PORT || 3002);
 });
