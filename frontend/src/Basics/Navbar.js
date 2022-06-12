@@ -7,10 +7,10 @@ const Navbar = () => {
     <div className="Navbar">
       <div className="container">
         <nav class="navbar">
-        {/* <a href="/home">
-        <img alt="goback" src={back} />
-      </a> */}
-          <div class="col-10">
+          <div class="col-4">
+            <h1>Energy Live 2022</h1>
+          </div>
+          <div class="col-6">
             <div className="email-nav mx-auto">
               {localStorage.getItem("userEmail")}
             </div>

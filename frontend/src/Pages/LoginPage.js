@@ -77,12 +77,12 @@ const LoginPage = ({}) => {
       localStorage.setItem("validlogin", validlogin);
 
       if (!validlogin) {
-        alert("NO MORE DAYS PLEASE EXTEND FIRST");
+        alert("No more active days!");
          window.location.replace("/validlogin");
       } else if (validlogin) {
         // if loggedin redirect to main
         //redirect to main page
-        alert("PAO");
+        alert("Login Successful!");
          window.location.replace("/main");
       }
     }

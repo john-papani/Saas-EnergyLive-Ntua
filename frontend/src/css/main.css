@@ -94,9 +94,12 @@ hr.solid {
     padding-bottom: 0px;
 }
 
-.Navbar .col-10 {
+.Navbar .col-6 {
     text-align: right;
     padding-top: 10px;
+}
+.Navbar .col-4   {
+    text-align: center;
 }
 
 .Navbar .col-2 {

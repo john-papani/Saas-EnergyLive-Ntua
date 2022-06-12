@@ -64,22 +64,30 @@ const AristeraMain = ({
   };
   useEffect(() => {
     async function getCountriesByQuality() {
-      const res = await axios.get(
-        `http://localhost:3003/cascade-lists/filter-countries/${quantity}`
-      );
-      console.log(res.data);
-      setCountriesByQuality(res.data);
+      if (quantity === "Generation Per Type") {
+        const res = await axios.get(
+          `http://localhost:3001/aggregated-generation-per-type/filter-country`
+        );
+        setCountriesByQuality(res.data);
+      } else if (quantity === "Actual Total Load") {
+        const res = await axios.get(
+          `http://localhost:3000/actual-total-load/filter`
+        );
+        console.log(res.data);
+        setCountriesByQuality(res.data);
+      }
     }
     getCountriesByQuality();
   }, [quantity]);
 
   useEffect(() => {
     async function getTypesByCountry() {
-      const res = await axios.get(
-        `http://localhost:3003/cascade-lists/filter-production-type/${countryLabel}`
-      );
-      console.log(res.data);
-      setTypesByCountry(res.data);
+      if (quantity === "Generation Per Type") {
+        const res = await axios.get(
+          `http://localhost:3001/aggregated-generation-per-type/filter-production-type/${country}`
+        );
+        setTypesByCountry(res.data);
+      }
     }
     getTypesByCountry();
   }, [country]);

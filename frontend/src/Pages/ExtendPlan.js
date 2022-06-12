@@ -49,7 +49,7 @@ const ExtendPlan = () => {
   };
   return (
     <div className="ExtendPlan">
-      <h1>Extend Page</h1>
+      <h1>Energy Live 2022</h1>
       {/* PERSONAL DETAILS */}
       <div class="col-lg-7 mx-auto">
         <div class="card mb-4">
@@ -163,8 +163,12 @@ const ExtendPlan = () => {
         <div class="row">
           <div class="d-inline-flex mx-auto">
             <div class="col-sm-3">
-              <button class="btn btn-lg" type="button">
-                <a href="/main">Back</a>
+              <button
+                class="btn btn-lg"
+                type="button"
+                onClick={() => window.location.replace("/main")}
+              >
+                Back
               </button>
             </div>
           </div>
