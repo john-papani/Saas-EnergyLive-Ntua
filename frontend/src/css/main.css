@@ -1,9 +1,7 @@
 .Main {
     /* background-color: #eae7dc; */
     background-color: rgba(158, 191, 205, 255);
-    height: auto !important;
-    min-height: 100%;
-    padding-bottom: 60px;
+    height: 100vh;
 }
 
 .Main .container {
