@@ -84,7 +84,7 @@ const AristeraMain = ({
     async function getTypesByCountry() {
       if (quantity === "Generation Per Type") {
         const res = await axios.get(
-          `https://aggregated-generation-per-type.herokuapp.com/aggregated-generation-per-type/filter-production-type/${country}`
+          `https://aggregated-generation-per-type.herokuapp.com/aggregated-generation-per-type/filter-production-type/${countryLabel}`
         );
         setTypesByCountry(res.data);
       }
@@ -115,22 +115,18 @@ const AristeraMain = ({
           setShowlastUpdate(false);
           console.log(e.value);
         }}
-        // value={defaultOption}
         placeholder="Quantity"
       />
       <p className="title-drop"> Country </p>
       <Dropdown
         options={countriesByQuality.map(
           (country_name) => country_name
-          // countryNames.find((x) => x.MapCode === code.AreaTypeCode).Country
         )}
-        //  options={countriesByQuality.map((countryName) => countryName.Country)}
         className="dropdown"
         onChange={(e) => {
           setShowlastUpdate(false);
           handleChangeCountry(e.value);
         }}
-        // value={defaultOption}
         placeholder="Country"
       />
       {/* me thn parakato grammi feugei to dropdown me to Generation Type se periptosi poy sto proto exoume actual total generation  */}
@@ -358,26 +354,3 @@ const countryNames = [
     MapCode: "AM",
   },
 ];
-
-// const types = [
-//   "Biomass",
-//   "Fossil Brown coal/Lignite",
-//   "Fossil Coal-derived gas",
-//   "Fossil Gas",
-//   "Fossil Hard coal",
-//   "Fossil Oil",
-//   "Fossil Oil shale",
-//   "Fossil Peat",
-//   "Geothermal",
-//   "Hydro Pumped Storage",
-//   "Hydro Run-of-river and poundage",
-//   "Hydro Water Reservoir",
-//   "Marine",
-//   "Nuclear",
-//   "Other",
-//   "Other renewable",
-//   "Solar",
-//   "Waste",
-//   "Wind Offshore",
-//   "Wind Onshore",
-// ];
