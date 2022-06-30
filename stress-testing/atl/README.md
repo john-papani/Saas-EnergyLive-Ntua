@@ -2,7 +2,7 @@ Indicatively, we test ATL endpoint with 10 different countries (Greece, Spain, I
 
 Number of threads is set to 50 and loop count is set to 5, which means that for the process of stress testing we suppose we have 5 sessions and in each session 50 different users access our app.
 
-We conclude that under these conditions atl microservice performs as expected (all endpoints produce Response Code: 200 and are marked with green colour in Apache jMeter).
+We conclude that under these conditions, ATL microservice performs as expected (all endpoints produce ``Response Code: 200`` and are marked with green colour in Apache jMeter).
 
 Some screenshots are shown below:
 
