@@ -10,7 +10,7 @@ app.use("/users", usersRoute);
 
 // HTTP Port
 
-const port = 3002 || process.env.PORT;
+const port = process.env.PORT || 3002;
 
 app.listen(port, () => {
     console.log("Server is running on port", port);

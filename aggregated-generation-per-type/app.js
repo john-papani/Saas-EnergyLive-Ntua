@@ -9,7 +9,7 @@ app.use("/aggregated-generation-per-type", agtRoute);
 
 // HTTP Port
 
-const port = 3001 || process.env.PORT;
+const port = process.env.PORT || 3001;
 
 app.listen(port, () => {
     console.log("Server is running on port", port);
