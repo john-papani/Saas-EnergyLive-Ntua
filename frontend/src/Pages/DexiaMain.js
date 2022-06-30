@@ -185,7 +185,7 @@ const DexiaMain = ({
           <div className="dexia-footer">
             <div class="row">
               <p>
-                Last Update time:
+                Last Update time: &nbsp; 
                 {showlastUpdate && update
                   ? moment(update).format("DD/MM/YYYY H:mm")
                   : ""}

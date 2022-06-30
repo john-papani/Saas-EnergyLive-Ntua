@@ -8,7 +8,6 @@ import About from "./Pages/About";
 import Main from "./Pages/Main";
 import ErrorPage from "./Pages/ErrorPage";
 import LoginPage from "./Pages/LoginPage";
-import Testing from "./Pages/Testing";
 import ExtendPlan from "./Pages/ExtendPlan";
 import Legal from "./Pages/Legal";
 import NotValidlogin from "./Pages/NotValidlogin";
@@ -27,7 +26,6 @@ function App() {
         <Route path="/plans" element={<Plans />} />
 
         <Route path="*" element={<ErrorPage />} />
-        <Route path="/test" element={<Testing />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/legal" element={<Legal />} />
       </Routes>
