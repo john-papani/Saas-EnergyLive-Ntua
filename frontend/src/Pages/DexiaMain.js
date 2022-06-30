@@ -21,11 +21,10 @@ const DexiaMain = ({
 }) => {
   const ref = useRef(null);
   const [daysuntil, setDaysUntil] = useState(0);
-  //! NA FTIAXO MIA SUNARTISI POY NA THN LEO finddaysLeft se enα component oste na thn kano import kai alloy poy thelo
   useEffect(() => {
     async function daysLeft() {
       const res = await axios.get(
-        `http://localhost:3002/users/find/${localStorage.getItem("userEmail")}`
+        `https://users-saas.herokuapp.com/users/find/${localStorage.getItem("userEmail")}`
       );
 
       let dateuser = await res.data.valid_until;

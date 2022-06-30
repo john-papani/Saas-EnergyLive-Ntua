@@ -36,19 +36,19 @@ const AristeraMain = ({
     //! analoga me to eidos tha kanei call to antistoixo API
     if (quantity === "Actual Total Load") {
       const res = await axios.get(
-        `http://localhost:3000/actual-total-load/${startDate}/${countryLabel}/json`
+        `https://actual-totalload.herokuapp.com/actual-total-load/${startDate}/${countryLabel}/json`
       );
       const res2 = await axios.get(
-        `http://localhost:3000/actual-total-load/Update/${startDate}/${countryLabel}`
+        `https://actual-totalload.herokuapp.com/actual-total-load/Update/${startDate}/${countryLabel}`
       );
       setData(res.data);
       setUpdate(res2.data);
     } else if (quantity === "Generation Per Type") {
       const res = await axios.get(
-        `http://localhost:3001/aggregated-generation-per-type/${startDate}/${countryLabel}/${type}/json`
+        `https://aggregated-generation-per-type.herokuapp.com/aggregated-generation-per-type/${startDate}/${countryLabel}/${type}/json`
       );
       const res2 = await axios.get(
-        `http://localhost:3001/aggregated-generation-per-type/Update/${startDate}/${countryLabel}/${type}`
+        `https://aggregated-generation-per-type.herokuapp.com/aggregated-generation-per-type/Update/${startDate}/${countryLabel}/${type}`
       );
       setData(res.data);
       setUpdate(res2.data);
@@ -66,12 +66,12 @@ const AristeraMain = ({
     async function getCountriesByQuality() {
       if (quantity === "Generation Per Type") {
         const res = await axios.get(
-          `http://localhost:3001/aggregated-generation-per-type/filter-country`
+          `https://aggregated-generation-per-type.herokuapp.com/aggregated-generation-per-type/filter-country`
         );
         setCountriesByQuality(res.data);
       } else if (quantity === "Actual Total Load") {
         const res = await axios.get(
-          `http://localhost:3000/actual-total-load/filter`
+          `https://actual-totalload.herokuapp.com/actual-total-load/filter`
         );
         console.log(res.data);
         setCountriesByQuality(res.data);
@@ -84,7 +84,7 @@ const AristeraMain = ({
     async function getTypesByCountry() {
       if (quantity === "Generation Per Type") {
         const res = await axios.get(
-          `http://localhost:3001/aggregated-generation-per-type/filter-production-type/${country}`
+          `https://aggregated-generation-per-type.herokuapp.com/aggregated-generation-per-type/filter-production-type/${country}`
         );
         setTypesByCountry(res.data);
       }
@@ -124,7 +124,7 @@ const AristeraMain = ({
           (country_name) => country_name
           // countryNames.find((x) => x.MapCode === code.AreaTypeCode).Country
         )}
-        // options={countriesByQuality.map((countryName) => countryName.Country)}
+        //  options={countriesByQuality.map((countryName) => countryName.Country)}
         className="dropdown"
         onChange={(e) => {
           setShowlastUpdate(false);

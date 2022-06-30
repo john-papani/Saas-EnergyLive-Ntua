@@ -17,7 +17,6 @@ import Plans from "./Pages/Plans";
 function App() {
   return (
     <Router>
-      {/* <Navbar/> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -31,7 +30,6 @@ function App() {
         <Route path="/test" element={<Testing />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/legal" element={<Legal />} />
-        {/* <Route path="/upload" element={<Upload/>}/> */}
       </Routes>
 
       <AnimatedCursor

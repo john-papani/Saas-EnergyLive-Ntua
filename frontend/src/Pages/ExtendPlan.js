@@ -14,7 +14,7 @@ const ExtendPlan = () => {
   useEffect(() => {
     async function getUserDetails() {
       const res = await axios.get(
-        `http://localhost:3002/users/find/${localStorage.getItem("userEmail")}`
+        `https://users-saas.herokuapp.com/users/find/${localStorage.getItem("userEmail")}`
       );
 
       let data = await res.data;
@@ -30,7 +30,7 @@ const ExtendPlan = () => {
   const handleExtendButton = () => {
     async function extend() {
       const data = await axios.post(
-        `http://localhost:3002/users/extend/${email}/${dayextend}`
+        `https://users-saas.herokuapp.com/users/extend/${email}/${dayextend}`
       );
     }
     extend();

@@ -32,10 +32,10 @@ const LoginPage = ({}) => {
 
   useEffect(() => {
     async function checkvalidconnection() {
-      //  !edo me to axios tha blepo an exo valid pedio akoma gia na sunexiso sto sait
+      //  !edo me to axios tha blepo an exo valid pedio akoma gia na sunexiso
 
       const res = await axios.get(
-        `http://localhost:3002/users/find/${userEmail}`
+        `https://users-saas.herokuapp.com/users/find/${userEmail}`
       );
       if (res.data.length != "0") {
         const now = Date.now();
@@ -44,7 +44,7 @@ const LoginPage = ({}) => {
         return compareDate(x2, x3);
       } else if (res.data.length == 0) {
         const res = await axios.post(
-          `http://localhost:3002/users/add/${username}/${userfamilyname}/${userEmail}`
+          `https://users-saas.herokuapp.com/users/add/${username}/${userfamilyname}/${userEmail}`
         );
         return true;
       } else {
@@ -73,17 +73,17 @@ const LoginPage = ({}) => {
   useEffect(() => {
     if (isLoggedIn) {
       localStorage.setItem("timelogin", timelogin);
-      localStorage.setItem("userEmail",userEmail)
+      localStorage.setItem("userEmail", userEmail);
       localStorage.setItem("validlogin", validlogin);
 
       if (!validlogin) {
         alert("No more active days!");
-         window.location.replace("/validlogin");
+        window.location.replace("/validlogin");
       } else if (validlogin) {
         // if loggedin redirect to main
         //redirect to main page
         alert("Login Successful!");
-         window.location.replace("/main");
+        window.location.replace("/main");
       }
     }
   }, [isLoggedIn]);
@@ -107,10 +107,6 @@ const LoginPage = ({}) => {
           />
         </GoogleOAuthProvider>
       </div>
-      <h3>{username}</h3>
-      <h4>{userfamilyname}</h4>
-      <h3>{userEmail}</h3>
-      <h2>{timelogin}</h2>
     </div>
   );
 };
