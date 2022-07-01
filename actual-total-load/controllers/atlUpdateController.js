@@ -3,7 +3,13 @@ const mongoose = require('mongoose');
 
 exports.get = async function (req, res) {
     try{
+<<<<<<< HEAD
+        // await mongoose.connect('mongodb://localhost:27017/EnergyLiveATL');
         await mongoose.connect('mongodb+srv://saasteam10:7oK3fIkTNG4Z18vg@energylive2022.fsgid.mongodb.net/EnergyLiveATL?retryWrites=true&w=majority')
+
+=======
+        await mongoose.connect('mongodb+srv://saasteam10:7oK3fIkTNG4Z18vg@energylive2022.fsgid.mongodb.net/EnergyLiveATL?retryWrites=true&w=majority')
+>>>>>>> 44ec81c3a56bd615cc8e6b7d1fd0d8ba8f5a9712
         console.log("Connected to DB");
         // get date_from
         var dateFrom = req.params['date_from'];
