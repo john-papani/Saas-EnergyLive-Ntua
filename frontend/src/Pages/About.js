@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Button } from "react-bootstrap";
 import alex from "../img/alex.jpg";
 import giannis from "../img/giannis.jpg";
-import leuteris from "../img/leuteris.png";
+import leuteris from "../img/leuteris.jpg";
 
 const About = () => {
   return (
