@@ -28,6 +28,7 @@ exports.get = async function (req, res) {
             country_names.push(row[0].Country);
         } 
 
+        country_names.sort();
         console.log(country_names);
 
         res.status(200).send(country_names)
