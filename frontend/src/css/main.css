@@ -1,7 +1,7 @@
 .Main {
     /* background-color: #eae7dc; */
     background-color: rgba(158, 191, 205, 255);
-    height: 100vh;
+    height: calc(100vh + 10vh);
 }
 
 .Main .container {

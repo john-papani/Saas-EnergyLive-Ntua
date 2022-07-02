@@ -206,7 +206,7 @@ const DexiaMain = ({
               <hr class="solid" />
               <div class="row">
                 <div class="col-sm-3"> Service Status: Active </div>
-                <div class="col-sm-3"> Days Left: {daysuntil}</div>
+                <div class="col-sm-3"> Subscription expires: {daysuntil}</div>
                 <div class="col-sm-3">
                   <a href="/extend"> Extend Plan </a>
                 </div>
