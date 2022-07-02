@@ -10,6 +10,10 @@
 3) Σε ενα δεύτερο terminal τρέχουμε τις εντολές `cd frontend` και έπειτα `npm run start`, έτσι ώστε να τεθεί σε λειτουργία ο frontend server.
 </p>
 </details>
+  
+The project is hosted on https://energylive2022-10.herokuapp.com/.
+
+Σημείωση: Εξαιτίας των περιορισμών της πλατφόρμας Heroku, η εφαρμογή αδρανοποιείται όταν παραμένει ανενεργή για συγκεκριμένο χρονικό διάστημα. Ως εκ τούτου, ενδέχεται να χρειαστούν μερικά δευτερόλεπτα για να φορτώσουν οι σελίδες της.
 
 ![HomePage](./frontend/src/img/homepage.png)
 ![ActualTotalLoad](frontend/src/img/actualtotalPage.png)
