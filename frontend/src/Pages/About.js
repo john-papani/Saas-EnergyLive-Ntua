@@ -13,17 +13,16 @@ const About = () => {
       <hr className="line-about" />
       <div className="container">
         <p className="about-paragraph">
-          <div className="q-about"> Who we are ? </div>
+          <div className="q-about"> Who are we? </div>
           <div className="ans-about">
-            We are 3 undergraduate students of school Electrical and Computer
-            Engineering that we have constructed the present project with the
-            title EnergyLive2022 for the course Software as a Service, course
-            8th semester of our school.
+            We are 3 undergraduate students at the School Electrical and Computer
+            Engineering of NTUA. We have constructed the present project,
+            titled 'EnergyLive2022' as part of our 'Software as a Service' course.
           </div>
-          <div className="q-about"> What is EnergyLive2022 ? </div>
+          <div className="q-about"> What is EnergyLive2022? </div>
           <div className="ans-about">
-            EnergyLive2022 is a Software as a Service, where you can see a chart
-            with data about Energy per Country.
+            'EnergyLive2022' is a Software as a Service application, where the user can see various charts
+            related to Energy consumption and generation in European countries.
           </div>
         </p>
       </div>
