@@ -1,0 +1,25 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "type": "object",
+    "title": "ActualTotalLoad",
+    "properties": {
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "totalLoadValue": {
+            "type": "number"
+        },
+        "mapCode": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 2
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "timestamp",
+        "totalLoadValue",
+        "mapCode"
+    ]
+}
