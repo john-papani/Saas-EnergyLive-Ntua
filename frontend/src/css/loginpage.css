@@ -1,5 +1,6 @@
 .LoginPage {
     text-align: center;
+  
     height: 100vh;
     background-color: cadetblue;
 }
@@ -7,5 +8,7 @@
 .google-btn {
     height: 300px;
     padding-top: 80px;
+    margin: auto;
+    width: fit-content;
     /* border: 10px solid red; */
 }

@@ -18,6 +18,7 @@ exports.get = async function (req, res) {
         // by find query { AreaTypeCode : "CTY", ProductionType : productionType }
         const production_types = await agt.distinct("ProductionType", { AreaTypeCode : "CTY", MapCode : mapCode });
 
+        production_types.sort();
         console.log(production_types);
 
         res.status(200).send(production_types)
