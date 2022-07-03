@@ -44,6 +44,7 @@ const AristeraMain = ({
       setData(res.data);
       setUpdate(res2.data);
     } else if (quantity === "Generation Per Type") {
+      type = type.replace('/', '%2F');
       const res = await axios.get(
         `https://aggregated-generation-per-type.herokuapp.com/aggregated-generation-per-type/${startDate}/${countryLabel}/${type}/json`
       );
