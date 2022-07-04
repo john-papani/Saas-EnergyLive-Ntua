@@ -4,7 +4,7 @@ We test AGT endpoint with all countries that have relevant data available (Austr
 
 Number of threads is set to 50 and loop count is set to 5, which means that for the process of stress testing we suppose we have 5 sessions and in each session 50 different users access our app.
 
-We conclude that under these conditions, AGT microservice performs as expected (all endpoints produce ``Response Code: 200`` and are marked with green colour in Apache jMeter). All details are listed in file ***atl-stress_testing.jmx*** which can only be opened via Apache jMeter.
+We conclude that under these conditions, AGT microservice performs as expected (all endpoints produce ``Response Code: 200`` and are marked with green colour in Apache jMeter). All details are listed in file ***agt-stress_testing.jmx*** which can only be opened via Apache jMeter.
 
 <details>
   <summary>
