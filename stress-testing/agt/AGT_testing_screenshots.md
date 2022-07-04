@@ -97,7 +97,7 @@
         Croatia
       </summary>
       <p>
-        <img src=https://user-images.githubusercontent.com/94307935/177145788-7301f732-ec3d-4f2c-80b8-a3efbba8af5c.png>
+        <img src="https://user-images.githubusercontent.com/94307935/177145788-7301f732-ec3d-4f2c-80b8-a3efbba8af5c.png">
       </p>
     </details>
     <details>
@@ -338,6 +338,310 @@
       </summary>
       <p>
         <img src="https://user-images.githubusercontent.com/94307935/177148073-e03b7004-1d8d-4c7c-a619-095915a3fd04.png">
+      </p>
+    </details>
+  </p>
+</details>
+
+<details>
+  <summary>
+    Filtering Thread Group Results
+  </summary>
+  <p>
+    <img src="https://user-images.githubusercontent.com/94307935/177149127-659a7a5d-8559-44e4-89dc-28a34a2072a3.png">
+    <img src="https://user-images.githubusercontent.com/94307935/177149218-a5bd5719-eb81-4bae-9874-8ff546ea745f.png">
+    <img src="https://user-images.githubusercontent.com/94307935/177149265-d9f2978a-113e-4a10-b8bd-535f47231ae8.png">
+    <img src="https://user-images.githubusercontent.com/94307935/177149368-464a930b-01ce-4aba-99e9-adbfb03efa23.png">
+    <img src="https://user-images.githubusercontent.com/94307935/177149435-798f89de-0e98-4251-8483-7375f14bdf0a.png">
+    <img src="https://user-images.githubusercontent.com/94307935/177149503-e895b695-b454-4e34-adfa-72f62e46df8d.png">
+  </p>
+</details>
+
+<details>
+  <summary>
+    Update Thread Group Results (per country)
+  </summary>
+  <p>
+    <details>
+      <summary>
+        Austria
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177149697-611b4f8d-8a77-45d9-a43e-89dbb5c7743e.png">
+        <img src="https://user-images.githubusercontent.com/94307935/177149778-3df24742-c5ef-4a7f-a1a8-7ce71661f095.png">
+        <img src="https://user-images.githubusercontent.com/94307935/177149844-5cdc2476-1602-486a-ad82-8396d47fb1da.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Belgium
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177149922-b9e7d4b4-2b01-40fa-8ecd-00b7a333f4c2.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Bosnia Herzegovina
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177149999-15a9d016-5af8-4a7a-b9af-653f29ac9bd5.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Bulgaria
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177150069-3a324e39-e755-4601-ab44-275ebc0cdfef.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Croatia
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177150160-f0b27454-1807-4e53-ab86-1268d9cd9623.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Cyprus
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177150240-2715a8eb-89f6-498d-8349-5c07721aca74.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Czech Republic
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177150297-3c520b57-cca4-4e24-a5c3-7bda605920b3.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Denmark
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177150373-4fd6b281-7f69-412e-8b48-ddb70e2cd228.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Estonia
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177150431-2e70f0f5-a3ec-4e47-ad77-1b546d69d5d5.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Finland
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177150498-928e4a25-7526-4824-9ba9-d8944a0030f6.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        France
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177150565-767542f8-3980-40ee-8ea4-12bd4181e0e8.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Georgia
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177150632-2682dcd2-1389-4d1b-a9ce-87b8d225a945.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Germany
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177150719-8e927dad-9042-4450-9006-74df52b6ca6d.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Greece
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177150787-90f59a65-c4db-4afb-a365-d7c714bb3bf1.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Hungary
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177150875-54752b6f-7a8e-4ca6-905c-c48cb6efda50.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Ireland
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177150946-5f88ede5-a8f7-434f-b3db-5cd7fa19bd06.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Italy
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177151011-72b6f255-7aa2-4671-afde-039d169339f7.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Kosovo
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177151081-7498664b-f000-42f8-98c9-e177731b508e.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Latvia
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177151142-0bb3ddd5-cdf1-4f43-ac09-b3e668d77601.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Lithuania
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177151234-d6ac39f0-7cfb-4e44-934a-0bfa86a5edd2.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Montenegro
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177151328-a48f6c01-bd52-45fc-9237-92c1f3313478.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Netherlands
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177151409-76614458-5e95-4bd4-b449-fcdb9636a3d1.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        North Macedonia
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177151484-c4a74193-832b-40de-9401-70b31c479a18.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Norway
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177151567-8e2398a2-22c0-4aa9-8fca-419a5ca344a3.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Poland
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177152321-3cae7bc3-903e-40c8-9d46-9634e53cfef0.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Portugal
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177152398-ef2b8ebc-b2a2-4e71-900c-64c39656a584.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Republic of Moldova
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177152504-30a3667c-670c-4317-9504-b9a6e9abb14b.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Romania
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177152581-f30e9468-b225-4847-b865-7adc46fe5c38.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Serbia
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177152648-8fb81a2b-dd22-40ba-9def-bf793c113ba3.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Slovakia
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177152725-9256ba17-b45b-4643-8f95-9a54bceb7022.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Slovenia
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177152808-a12c9b6c-77fb-4097-ac69-1388ce6645f3.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Spain
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177152900-2b923f7f-4ff4-4c5b-91ee-834661562252.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Sweden
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177152972-fc48d739-1380-4d12-ac65-812690fbaea6.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Switzerland
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177153041-b91f0af7-b853-461a-8fa4-d4fbfa042498.png">
+      </p>
+    </details>
+    <details>
+      <summary>
+        Ukraine
+      </summary>
+      <p>
+        <img src="https://user-images.githubusercontent.com/94307935/177153112-f584c983-e473-4208-a359-724c987f5a5a.png">
       </p>
     </details>
   </p>
