@@ -3,7 +3,7 @@
     Aggregated Generation per Type request parameters
   </summary>
   <p>
-    <img src="https://user-images.githubusercontent.com/94307935/177054434-a1212cea-efea-4e1e-89ed-5d37e1067712.png)">
+    <img src="https://user-images.githubusercontent.com/94307935/177054434-a1212cea-efea-4e1e-89ed-5d37e1067712.png">
   </p>
  </details>
  
