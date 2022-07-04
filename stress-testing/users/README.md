@@ -1,6 +1,6 @@
 # Users Stress Testing
 
-We test all available routes of Users endpoint (FIND, ADD, 
+We test all available routes of Users endpoint (FIND, ADD, EXTEND)
 
 Number of threads is set to 10 and loop count is set to 5, which means that for the process of stress testing we suppose we have 5 sessions and in each session 10 different users access our app.
 
