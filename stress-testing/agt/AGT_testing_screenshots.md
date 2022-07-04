@@ -1,3 +1,11 @@
+# Aggregated Generation per Type Stress Testing
+
+We test AGT endpoint with all countries that have relevant data available (Austria, Belgium, Bosnia Herzegovina, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Georgia, Germany, Greece, Hungary, Ireland, Italy, Kosovo, Latvia, Lithuania, Montenegro, Netherlands, North Macedonia, Norway, Poland, Portugal, Republic of Moldova, Romania, Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, Ukraine). We test UPDATE endpoint with the same countries. Date parameter is set to 01-01-2022.
+
+Number of threads is set to 50 and loop count is set to 5, which means that for the process of stress testing we suppose we have 5 sessions and in each session 50 different users access our app.
+
+We conclude that under these conditions, AGT microservice performs as expected (all endpoints produce ``Response Code: 200`` and are marked with green colour in Apache jMeter). All details are listed in file ***atl-stress_testing.jmx*** which can only be opened via Apache jMeter.
+
 <details>
   <summary>
     Aggregated Generation per Type request parameters
